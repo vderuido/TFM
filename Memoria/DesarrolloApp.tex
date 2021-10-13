@@ -1,0 +1,87 @@
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Víctor de Tejada Molera}
+\begin{document}
+    \chapter{Desarrollo de la aplicación del test subjetivo.}
+        En este capítulo se explican las herramientas y lenguajes utilizados para la creación de la aplicación de escritorio con la que se realizan posteriormente los test subjetivos de audio necesarios para el proyecto. Así mismo, se explica el algoritmo utilizado y las diferentes versiones utilizadas para la creación de la interfaz de usuario.
+        
+        \section{Lenguajes y software utilizado}
+            Para el desarrollo de la aplicación, se ha optado por utilizar el lenguaje de programación Python3. Este lenguaje tiene la ventaja de que incluye numerosas librerías que permiten desarrollar de forma simplificada interfaces gráficas con las que los participantes de los test puedan interactuar de forma sencilla. Para nuestro caso particular, se ha optado por utilizar la librería GTK (PyGObject) que es una de las más utilizadas entornos Linux, aunque también puede utilizarse en entornos de Windows o Mac.
+            
+            Para el diseño de la interfaz se ha utilizado el software ``\textit{Glade}'' que permite utilizar un entorno gráfico para la creación de todos los elementos de la interfaz. Con dicho programa se obtiene un fichero xml con extensión ``.glade'' que es el que el \textit{script} de Python lee y con el que genera la interfaz que el usuario utiliza. En la figura \ref{fig:gladeInic} se puede observar la pantalla de inicio de dicho programa. 
+            
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=.2]{../imagenes/gladeInicio.png}
+                    \caption{Ventana de inicio del programa \textit{Glade}.}
+                    \label{fig:gladeInic}
+                \end{center}
+            \end{figure}
+            
+           \newpage
+
+           Para la codificación de los scripts de Python se ha utilizado el software ``\textit{Gnome Builder}''; un entorno de aplicaciones que incluye todas las herramientas para depurar, compilar y ejecutar los scripts dentro del mismo espacio. Al igual que con \textit{Glade}, el software es gratuito de código abierto. En la figura \ref{fig:builderIni} se encuentra una captura de la interfaz del programa.
+           
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=.2]{../imagenes/builderIni.png}
+                    \caption{Captura del software Gnome Builder.}
+                    \label{fig:builderIni}
+                \end{center}
+            \end{figure}
+            
+        \section{Características de la interfaz de usuario}
+            Como se ha comentado en el apartado anterior, la interfaz de usuario se ha diseñado utilizando el software ``\textit{Glade}''. Desde un principio, se ha querido diseñar una interfaz que sea lo más simple posible, no sólo por facilidad para realizarla, sino para evitar que las personas participantes puedan centrarse exclusivamente en los aspectos del test y hacer que su uso no suponga ninguna dificultad.  
+            
+            En una primera instancia se decidió generar una interfaz en la que los elementos principales eran dos botones con los que el usuario fuera capaz de escoger cuál de los audios quería reproducir. Las respuestas se recogerían en dos casillas, o \textit{toggles}. También se incluyó un botón en la parte inferior para enviar las respuestas mientras. En la parte superior se incluye un texto que indica el número de pregunta por la que va el test. Todos estos elementos se pueden observar en la figura \ref{fig:uiIni}.
+            
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=.6]{../imagenes/uiIni.png}
+                    \caption{Versión inicial de la interfaz de usuario.}
+                    \label{fig:uiIni}
+                \end{center}
+            \end{figure}
+            
+            Esta configuración es la que se utiliza en el test previo. Al finalizar dicho test, se les pide a los participantes que propongan diferentes mejoras para perfeccionar la interfaz de usuario. Entre ellas, las más habituales consistieron en la sustitución de los \textit{toggles} por elementos más grandes al estilo de \textit{swithces} o interruptores y la actualización de la posición de dichos elementos a su estado inicial entre cada una de las preguntas.
+            
+            Atendiendo a estas propuestas, se modifica la interfaz con el resultado que se muestra en la figura \ref{fig:uiFin}.
+            
+            \begin{figure}
+                \begin{center}
+                    \includegraphics[scale=.6]{../imagenes/interFin.png}
+                    \caption{Versión inicial de la interfaz de usuario.}
+                    \label{fig:uiFin}
+                \end{center}
+            \end{figure}
+            
+            Durante la creación de la interfaz, se planteó la posibilidad de generar un botón que permitiera seleccionar la carpeta de la que el programa extrae los audios, pero finalmente se rechazó porque aumentaba la complejidad tanto del \textit{script} como de la interfaz y, al realizar todos los participantes el test sobre el mismo ordenador, no aportaba ninguna funcionalidad de utilidad.
+            
+        \section{Codificación del script en Python}
+            Para la codificación del \textit{script}, como ya se comentó anteriormente, se utilizó el entorno de desarrollo \textit{Gnome Builder}. Una de las ventajas que tiene este enterno es que incluye su propio terminal y herramientas de depuración y corrección de errores, además de la posibilidad de instalar las diferentes librerías que pudieran hacer falta para el desarrollo de las aplicaciones.
+            
+            El procedimiento seguido para la codificación de la aplicación ha sido gradual. En primer lugar se han diseñado diferentes métodos y funciones que se apliquen diréctamente desde la consola. De esta forma, se comprueba que el algoritmo funciona correctamente y que se extraen los resultados en el formato deseado.
+            
+            Una vez, se ha comprobado que este \textit{script} funciona, se modifca el mismo haciendo que las diferentes funciones se activen en función de las señales que manejas los diferentes elementos de la interfaz de usuario ya creada y que se referencian dentro del código de Python.
+            
+            Durante todo el proceso, las consultas a la documentación de la API de Python para GTK REFERENCIAGTK y de las diferentes librerías necesarias para el desarrollo de la aplicación.
+            
+            \subsection{Estructura del código}
+                El código de Python se encuentra dividido en diferentes partes:
+                En primer lugar, la zona donde se importan las diferentes librerías para el correcto funcionamiento del script. Aquí se incluyen las que permiten reproducir los diferentes audios, manejar información, navegar por el sistema de archivos del ordenador, la interfaz gráfica, etc.
+                
+                A continuación, se encuentra una zona donde se definen diferentes funciones que serán usadas repetidamente a lo largo del \textit{script}. 
+                
+                Después, se definen algunas variables globales necesarias y da comienzo la clase \textit{Main} de la aplicación. En ella, se inicializan las referencias a los diferentes elementos de la interfaz gráfica con las que los usuarios interactúan y se establecen qué funciones se llaman en función de las señales que manejan. Estas funciones se definen en último lugar a continuación de dichas inicializaciones.
+                
+                En el anexo X se puede leer el código en su totalidad.
+               
+        
+
+\end{document}
