@@ -121,11 +121,21 @@ class Main:
     def botonStartTest(self,widget):
         wMainWindow=self.builder.get_object("mainWindow")
         wMainWindow.connect("delete-event",gtk.main_quit)
+        wMainWindow.connect("key-press-event", self.key_press)
         wMainWindow.show()
         
          
     # Funciones interfaz Test
 
+    def key_press (self,window,event):
+        keyname=Gdk.keyval_name(event.keyval)
+        if keyname=="1":
+            reproduceAudio(miruta, misArchivos, miIndice1)
+            print("1 pulsado")
+        if keyname=="2":
+            reproduceAudio(miruta, misArchivos,miIndice2)
+            print("2 pulsado")
+            
     def botonAudio1(self, widget):
         print("Boton 1 pulsado")
         reproduceAudio(miruta, misArchivos, miIndice1)
