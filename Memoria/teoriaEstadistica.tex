@@ -8,14 +8,20 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \author{Víctor de Tejada Molera}
 \begin{document}
-\chapter{Teoría estadística}
-    En este apartado se pretende explicar con ligera profundidad algunos conceptos estadísticos que son utilizados a lo largo de este proyecto. En ningún caso pretende ser una explicación densa con demostraciones matemáticas y formulaciones complejas; más bien un intento de facilitar el entendimiento de los conceptos sobre teoría estadística que se aplican y su motivo en lugar de alguna de las otras técnicas que suelen aplicarse. Si se desea expandir la información sobre alguno de estos campos, se recomienda la lectura de los diferentes documentos que se referencian a lo largo de este capítulo y que pueden encontrarse en la bibliografía al final del documento.
-    
-    \section{Conceptos básicos}
+\chapter{Análisis estadístico}    
         
-    
     \section{UNE-EN ISO 10399}
-    
+        La norma UNE-EN ISO 10399: ``Análisis sensorial. Metodología. Ensayo Duo-Trio.'' REFERENCIANORMA es un documento que permite analizar la probabilidad de que eventos perceptuales sean percibidos como iguales o diferentes según el número de respuestas definidas como correctas y/o erróneas al realizar experimentos basados en test duo-trio.
+        
+        Para ello, en primer lugar se definen diferentes términos que aparecen de forma constante a lo largo de la norma. Para nuestro caso particular, los términos más relevantes son:
+        
+        \begin{itemize}
+            \item alpha-risk o $\alpha$-risk: es la probabilidad para poder afirmar que existe una diferencia perceptual cuando en realidad no existe.
+            \item beta-risk o $\beta$-risk: es la probabilidad para poder afirmar que no existe una diferencia perceptual cuando en realidad sí existe.
+            \item diferencia perceptual: situación en la que dos o maś muestras pueden ser distinguidas por sus propiedades sensitivas (a través del oído, tacto, gusto, vista, etc.)
+            \item similaridad perceptual: situación en la que las diferencias entre muestras son tan pequeñas que no pueden distinguirse entre sí de forma sensitiva.
+        \end{itemize}
+        Para el cálculo de las probabilidades $\alpha$-risk y $\beta$-risk, la norma proporciona dos sendas tablas que se encuentran en el Anexo A de dicha norma (las tablas A.1 y A.2 respectivamente).
     \section{Modelos Thursthonianos}
     
 \end{document}
