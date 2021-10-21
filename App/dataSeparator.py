@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot
+import matplotlib.pyplot as plt
 import os
 import math
 
@@ -23,6 +23,9 @@ resultados=pd.DataFrame(
         'distancia Fila': np.array([None]*len(df)),
         'distancia Butaca':np.array([None]*len(df)),
         'distancia': np.array([None]*len(df)),
+        'distancia fuente X': np.array([None]*len(df)),
+        'distancia fuente Y': np.array([None]*len(df)),
+        'distancia Fuente': np.array([None]*len(df)),
     }
 
 )
@@ -116,10 +119,12 @@ for i in range(0,len(df)):
     distancia=math.sqrt(distanciaFila*distanciaFila + distanciaButaca*distanciaButaca)
 
     #Calculo de distancia respecto de la fuente
-    distanciaFuenteX=min(numerobutaca1,numerobutaca2)+distanciaButaca
-    distanciaFuenteY=min(numerofila1,numerofila2)+distanciaFila
+    distanciaFuenteX=min(numerobutaca1,numerobutaca2)/2+distanciaButaca/2
+    distanciaFuenteY=min(numerofila1,numerofila2)+distanciaFila/2
     distanciaFuente=math.sqrt(distanciaFuenteX*distanciaFuenteX+distanciaFuenteY*distanciaFuenteY)
 
+    #Añadir al plot
+    plt.plot(distanciaFuenteX,distanciaFuenteY,'ok')
     #Almacenar datos en resultados
     resultados.iloc[i,0]=df.iloc[i,0]
     resultados.iloc[i,1]=df.iloc[i,1]
@@ -128,8 +133,17 @@ for i in range(0,len(df)):
     resultados.iloc[i,4]=distanciaFila
     resultados.iloc[i,5]=distanciaButaca
     resultados.iloc[i,6]=distancia
-    resultados.iloc[i,7]=distanciaFuente
+    resultados.iloc[i,7]=distanciaFuenteX
+    resultados.iloc[i,8]=distanciaFuenteY
+    resultados.iloc[i,9]=distanciaFuente
 
 #Imprimir y guardar en csv
 print(resultados)
 resultados.to_csv(rutaResultados, index=False)
+
+#Representar
+plt.axis('equal')
+plt.xlim([0,15]) #<-- set the x axis limits
+plt.ylim([0,20]) #<-- set the y axis limits
+plt.grid(b=True, which='major') #<-- plot grid lines
+plt.show()
