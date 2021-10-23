@@ -12,6 +12,9 @@ def listaArchivos(ruta):
 rutaCSV="/home/vic/Documents/universidad/PFM/analisis_datos/Test_Final/resultadosTest.csv"
 rutaResultados="/home/vic/Documents/universidad/PFM/analisis_datos/Test_Final/analisisTest2.csv"
 
+dx=0.53
+dy=0.9
+dy0=3.80+1.75+0.29
 df=pd.read_csv(rutaCSV)
 
 resultados=pd.DataFrame(
@@ -119,8 +122,8 @@ for i in range(0,len(df)):
     distancia=math.sqrt(distanciaFila*distanciaFila + distanciaButaca*distanciaButaca)
 
     #Calculo de distancia respecto de la fuente
-    distanciaFuenteX=min(numerobutaca1,numerobutaca2)/2+distanciaButaca/2
-    distanciaFuenteY=min(numerofila1,numerofila2)+distanciaFila/2
+    distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*distanciaButaca/2
+    distanciaFuenteY=min((dy0+dy*(numerofila1-1)),(dy0+dy*(numerofila2-1)))+distanciaFila/2
     distanciaFuente=math.sqrt(distanciaFuenteX*distanciaFuenteX+distanciaFuenteY*distanciaFuenteY)
 
     #Añadir al plot
@@ -143,7 +146,7 @@ resultados.to_csv(rutaResultados, index=False)
 
 #Representar
 plt.axis('equal')
-plt.xlim([0,15]) #<-- set the x axis limits
-plt.ylim([0,20]) #<-- set the y axis limits
+plt.xlim([0,10]) #<-- set the x axis limits
+plt.ylim([0,24]) #<-- set the y axis limits
 plt.grid(b=True, which='major') #<-- plot grid lines
 plt.show()
