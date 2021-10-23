@@ -9,6 +9,7 @@ from playsound import playsound
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk as gtk
+from gi.repository import Gdk
 
 ## DEFINICIÓN DE FUNCIONES
 
@@ -27,7 +28,7 @@ def reproduceAudio(ruta, archivos, indice):
 
 ## Variables Globales
 rutaTutorial='/home/vic/Documents/universidad/PFM/Audios/tutorial'
-miruta='/home/vic/Documents/universidad/PFM/Audios/convolved'
+miruta='/home/vic/Documents/universidad/PFM/Audios/newIRs'
 misArchivosTutorial=listaArchivos(rutaTutorial)
 misArchivos=listaArchivos(miruta)
 respuestas=[None]
