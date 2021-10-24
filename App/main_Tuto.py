@@ -28,14 +28,14 @@ def reproduceAudio(ruta, archivos, indice):
 
 ## Variables Globales
 rutaTutorial='/home/vic/Documents/universidad/PFM/Audios/tutorial'
-miruta='/home/vic/Documents/universidad/PFM/Audios/newIRs'
+miruta='/home/vic/Documents/universidad/PFM/Audios/IRsTest'
 misArchivosTutorial=listaArchivos(rutaTutorial)
 misArchivos=listaArchivos(miruta)
 respuestas=[None]
 opcion=0
 i=0
 maximo=24
-rutacsv='/home/vic/Documents/universidad/PFM/Resultados/prueba.csv'
+rutacsv='/home/vic/Documents/universidad/PFM/Resultados/test2.csv'
 df=pd.DataFrame(
     {
         'archivo1': np.array(respuestas),
