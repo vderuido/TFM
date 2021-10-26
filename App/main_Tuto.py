@@ -1,8 +1,8 @@
-import pyaudio
-import wave
+#import pyaudio
+#import wave
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot
+#import matplotlib.pyplot
 import os
 import random
 from playsound import playsound
@@ -114,10 +114,10 @@ class Main:
         reproduceAudio(rutaTutorial, misArchivosTutorial, 1)
         
     def botonDiferente2(self,widget):
-        reproduceAudio(rutaTutorial, misArchivosTutorial, 5)
+        reproduceAudio(rutaTutorial, misArchivosTutorial, 6)
         
     def botonFila2(self,widget):
-        reproduceAudio(rutaTutorial, misArchivosTutorial, 6)
+        reproduceAudio(rutaTutorial, misArchivosTutorial, 5)
         
     def botonStartTest(self,widget):
         wMainWindow=self.builder.get_object("mainWindow")
