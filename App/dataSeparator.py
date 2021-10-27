@@ -133,7 +133,7 @@ for i in range(0,len(df)):
     else:
         x2=dx/2+dx*(numerobutaca2/2-1)
     distanciaFuenteY=min((dy0+dy*(numerofila1-1)),(dy0+dy*(numerofila2-1)))+distanciaFila/2
-    if numerobutaca1>14 ^ numerobutaca2>14:
+    if (numerobutaca1>14 and numerobutaca2>14):
         distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*abs(x1-x2)+dpasillo
     else:
         distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*abs(x1-x2)/2
