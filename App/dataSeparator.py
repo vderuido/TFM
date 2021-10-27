@@ -15,6 +15,7 @@ rutaResultados="/home/vic/Documents/universidad/PFM/analisis_datos/Test_Final/an
 dx=0.53
 dy=0.9
 dy0=3.80+1.75+0.29
+dpasillo=1.80
 df=pd.read_csv(rutaCSV)
 
 resultados=pd.DataFrame(
@@ -51,6 +52,7 @@ for i in range(0,len(df)):
     distanciaFilaX=0
     distanciaFilaY=0
     distanciaFila=0
+
 
     #Extraer fila y butaca del primer archivo. En primer lugar, analiza si la fila es A o F
     #Después, analiza si la fila es mayor que 10 viendo si la empieza el código de butaca B
@@ -122,8 +124,22 @@ for i in range(0,len(df)):
     distancia=math.sqrt(distanciaFila*distanciaFila + distanciaButaca*distanciaButaca)
 
     #Calculo de distancia respecto de la fuente
-    distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*distanciaButaca/2
+    if numerobutaca1>14:
+        x1=dx/2+dx*(numerobutaca1/2-1)+dpasillo
+    else:
+        x1=dx/2+dx*(numerobutaca1/2-1)
+    if numerobutaca2>14:
+        x2=dx/2+dx*(numerobutaca2/2-1)+dpasillo
+    else:
+        x2=dx/2+dx*(numerobutaca2/2-1)
     distanciaFuenteY=min((dy0+dy*(numerofila1-1)),(dy0+dy*(numerofila2-1)))+distanciaFila/2
+    if numerobutaca1>14 ^ numerobutaca2>14:
+        distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*abs(x1-x2)+dpasillo
+    else:
+        distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*abs(x1-x2)/2
+
+    #distanciaFuenteX=min((dx/2+dx*(numerobutaca1/2-1)),(dx/2+dx*(numerobutaca2/2-1)))+dx*distanciaButaca/2
+    #distanciaFuenteY=min((dy0+dy*(numerofila1-1)),(dy0+dy*(numerofila2-1)))+distanciaFila/2
     distanciaFuente=math.sqrt(distanciaFuenteX*distanciaFuenteX+distanciaFuenteY*distanciaFuenteY)
 
     #Añadir al plot
