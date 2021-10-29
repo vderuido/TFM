@@ -117,6 +117,26 @@
         
             Al  final del proceso de toma de datos, se obtuvieron un total de 100 archivos de audio en formato ``.wav'' con la respuesta al impulso obtenida en cada una de las posiciones.
             
+            \section{Procesado de los datos - Auralizaciones}
+                Una vez obtenidos los datos, se planteó la cuestión sobre qué tipo de audio sería más conveniente: si las respuestas al impulso o bien dichas respuestas convolucionadas con otros audios anecoicos (también conocido como audios auralizados). Para el caso de este proyecto, se ha optado por la segunda opción por varios motivos.
+        
+                El primero es que las personas están más acostumbradas a escuchar, y por tanto comparar, sonidos de carácter más melódico que se alejan de las respuestas al impulso, las cuales son parecidas al producido por un disparo.
+        
+                Otro motivo es que este sistema permite escoger un tipo de sonido que se ajuste en buena medida al tipo de evento para los que la sala está pensada con la ventaja añadida de que no se necesita que dicho evento se realice en el momento de las grabaciones.
+        
+                El audio utilizado está obtenido de la página web de OpenAir de la universidad de York que incluye numerosos audios anecóicos de diferentes cateogrías y también respuestas impulsivas de diferente tipos de espacios grabados por todo el mundo. Particularmente, se escoge la grabación de una voz femenina haciendo una escala musical. Esto se corresponde con el uso principal del Salón de actos que consiste en conferencias y música de coro.
+        
+                Para la auralización se utiliza el software de Cycling74 ``MaxMSP'' junto con el plugin de la Universidad de Huddersfield, ``\textit{HISSTOOLS}''. Este software permite realizar la convolución de la respuesta al impulso grabada con el audio anecoico de forma que se obtiene el audio auralizado que se desea. Para ello, se crea un pequeño script o ``\textit{patch}'' que realiza dicho procedimiento para todas las respuestas impulsivas previamente grabadas y se almacenan las convoluciones en una nueva carpeta de forma automática. Dicho \textit{patch} puede observarse en la siguiente figura \ref{fig:convolver_max}. Del mismo modo, se incluye una versión texto de dicho script en el Anexo XX.
+        
+                \begin{figure}
+	                \includegraphics[scale=0.4]{../imagenes/convolver_max.png}
+			        \centering
+			        \caption{Patch en MaxMSP para la convolución de las respuestas impulsivas con el audio anecoico.}
+			        \label{fig:convolver_max}
+	            \end{figure}
+        
+                Por comodidad, se mantiene la misma numeración y terminología para los audios convolucionados que se había seguido para las grabaciones. Siendo la única diferencia la carpeta donde se almacenan.
+            
     \section{Segunda toma de datos}
         
        \subsection{Numeración y selección de las butacas en la segunda toma de datos}
@@ -172,26 +192,13 @@
             \end{figure}
                 
             En total se obtuvieron unas 83 grabaciones que, a continuación, se procesaban en el mismo ordenador utilizando el software Dirac con el fin de obtener las respuestas al impulso. Para ello, se utiliza el mismo menú utilizado en la primera toma de datos, pero esta vez, en vez de realizar una grabación, se importa la señal ya grabada y se le pide al programa que calcule la respuesta al impulso utilizando como señal de referencia la misma utilizada en la reproducción de la fuente. De forma que el programa genera al final un archivo como el que se observa en la figura X.
+            
+        \subsection{Procesado de los datos}
+            Para esta seguna toma de datos, se ha decidido no realizar el proceso de auralización de las señales con los audios anecoicos. Esto se debe a que el proceso de auralización no es perfecto y que, al final, a pesar de que son señales más ``habituales'' para los participantes, no nos aportan nada que no se pueda conseguir reproduciendo diréctamente las respuestas al impulso.
+            
+            A nivel de procesado para esta parte, sólo se ha recortado la duración del fichero de audio para ajustarlo a la duración de la señal y no hacer que los oyentes escucharan largos tramos de silencio. En ningún momento se modifican las ganancias de las señales para evitar que la información acústica pueda quedar modificada respecto de los valores de grabación. El ajuste de volumen para que sea cómodo se realizará en el test mediante los ajustes de volumen del sistema operativo.
 
         
-    \section{Procesado de los datos - Auralizaciones}
-        Una vez obtenidos los datos, se planteó la cuestión sobre qué tipo de audio sería más conveniente: si las respuestas al impulso o bien dichas respuestas convolucionadas con otros audios anecoicos (también conocido como audios auralizados). Para el caso de este proyecto, se ha optado por la segunda opción por varios motivos.
-        
-        El primero es que las personas están más acostumbradas a escuchar, y por tanto comparar, sonidos de carácter más melódico que se alejan de las respuestas al impulso, las cuales son parecidas al producido por un disparo.
-        
-        Otro motivo es que este sistema permite escoger un tipo de sonido que se ajuste en buena medida al tipo de evento para los que la sala está pensada con la ventaja añadida de que no se necesita que dicho evento se realice en el momento de las grabaciones.
-        
-        El audio utilizado está obtenido de la página web de OpenAir (REFERENCIA) que incluye numerosos audios anecóicos de diferentes cateogrías y también respuestas impulsivas de diferente tipos de espacios grabados por todo el mundo. Particularmente, se escoge la grabación de una voz femenina haciendo una escala musical. Esto se corresponde con el uso principal del Salón de actos que consiste en conferencias y música de coro.
-        
-        Para la auralización se utiliza el software de Cycling74 ``MaxMSP'' junto con el plugin de la Universidad de Huddersfield, ``\textit{HISSTOOLS}'' (REFERENCIA). Este software permite realizar la convolución de la respuesta al impulso grabada con el audio anecoico de forma que se obtiene el audio auralizado que se desea. Para ello, se crea un pequeño script o ``\textit{patch}'' que realiza dicho procedimiento para todas las respuestas impulsivas previamente grabadas y se almacenan las convoluciones en una nueva carpeta de forma automática. Dicho \textit{patch} puede observarse en la siguiente figura \ref{fig:convolver_max}. Del mismo modo, se incluye una versión texto de dicho script en el Anexo XX.
-        
-        \begin{figure}
-	        \includegraphics[scale=0.4]{../imagenes/convolver_max.png}
-			\centering
-			\caption{Patch en MaxMSP para la convolución de las respuestas impulsivas con el audio anecoico.}
-			\label{fig:convolver_max}
-	    \end{figure}
-        
-        Por comodidad, se mantiene la misma numeración y terminología para los audios convolucionados que se había seguido para las grabaciones. Siendo la única diferencia la carpeta donde se almacenan.
+    
 
 \end{document}
