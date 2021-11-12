@@ -10,7 +10,7 @@ def listaArchivos(ruta):
     return archivos
 
 rutaCSV="/home/vic/Documents/universidad/PFM/analisis_datos/Test_Final/resultadosTest.csv"
-rutaResultados="/home/vic/Documents/universidad/PFM/analisis_datos/Test_Final/analisisTest2.csv"
+rutaResultados="/home/vic/Documents/universidad/PFM/analisis_datos/Test_Final/analisisTestMetros.csv"
 
 dx=0.53
 dy=0.9
@@ -121,7 +121,7 @@ for i in range(0,len(df)):
 
     distanciaFila=abs(numerofila1-numerofila2)
     distanciaButaca=(abs(numerobutaca1-numerobutaca2))/2
-    distancia=math.sqrt(distanciaFila*distanciaFila + distanciaButaca*distanciaButaca)
+    distancia=math.sqrt(distanciaFila*dy*distanciaFila*dy + distanciaButaca*dx*distanciaButaca*dx)
 
     #Calculo de distancia respecto de la fuente
     if numerobutaca1>14:

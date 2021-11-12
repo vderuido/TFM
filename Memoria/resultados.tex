@@ -1,0 +1,95 @@
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{float}
+\author{Víctor de Tejada Molera}
+\begin{document}
+\chapter{Resultados de los experimentos}
+    En este apartado se muestran los resultados obtenidos de los diferentes test perceptuales que se han realizado a lo largo del proyecto. 
+    \section{Resultados del test previo}
+        Como ya se comentó en apartados anteriores, en este test previo el objetivo consiste en comprobar que los participantes podían realmente distinguir los estímulos cuando se correspondían a las de las posiciones más alejadas entre sí. Del mismo modo, se han agrupado los resultados en función de cuatro casos posibles: Butacas separadas horizontalmente, butacas separadas verticalmente, butacas separadas tanto vertical como horizontalmente y butacas en la misma posición. Los resultados totales pueden observarse en la tabla \ref{tablaTestPrevio}, mientras que la tabla con cada uno de los resultados individuales con el nombre de cada posición exacta se encuentra en el anexo X.
+        
+        \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c | c |}
+			    \hline
+				\textbf{Separación butacas}&\textbf{Respuestas}&\textbf{Total iguales}&\textbf{Total diferentes}&\textbf{Duda}\\ \hline
+                Horizontal&27&9&18&4\\ \hline
+                Vertical&10&1&9&1\\ \hline
+                Horizontal y vertical&23&5&18&3\\ \hline
+                Misma posición&10&9&1&1\\ \hline
+			\end{tabular}
+			\caption{Resultados del test previo.}
+			\label{tablaTestPrevio}
+			\end{scriptsize}
+			\end{center}	
+		\end{table}	
+	\section{Resultados del test final}
+	    Para este test, se han agrupado los resultados de dos formas de forma que resulta más fácil entenderlos para el análisis que se realiza más adelante en el apartado de ``Análisis estadístico''. La primera forma de organización es en función de la distancia relativa entre butacas. Para este caso, los resultados son los mostrados en la tabla \ref{tablaTestButacas}.
+	    
+	    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c | c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Respuestas}&\textbf{Total iguales}&\textbf{Total diferentes}&\textbf{Duda}\\ \hline
+                (0-2)&61&40&21&20\\ \hline
+                [2-3)&76&40&36&27\\ \hline
+                [3-4)&102&47&55&28\\ \hline
+                [4-5)&111&30&81&32\\ \hline
+                [5-6)&95&24&71&30\\ \hline
+                [6-7)&78&11&67&16\\ \hline
+                [7-8)&70&9&61&6\\ \hline
+                [8-9)&52&4&48&12\\ \hline
+                (9-10]&62&3&59&9\\ \hline
+                [10-11)&47&1&46&3\\ \hline
+                [11-12)&33&1&32&2\\ \hline
+                [12-14)&33&1&32&1\\ \hline
+                [14-18)&24&0&24&1\\ \hline
+			\end{tabular}
+			\caption{Resultados del test final en función de la distancia relativa entre butacas.}
+			\label{tablaTestButacas}
+			\end{scriptsize}
+			\end{center}	
+		\end{table}
+		
+		La otra forma de organización de los datos es ordenado los datos en función de la distancia relativa a la fuente sonora (considerando esta como un origen de coordenadas). Haciendo esta organización, los datos se reparten de la forma que se muestra en la tabla \ref{tablaTestFuente}
+		
+		\begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c | c |}
+			    \hline
+				Distancia [m]&Resultados&Total iguales&Total diferentes&Duda\\ \hline
+                [6-8)&15&5&10&4\\ \hline
+                [8-10)&35&10&25&5\\ \hline
+                [10-11)&32&8&24&9\\ \hline
+                [11-12)&54&13&41&14\\ \hline
+                [12-13)&56&15&41&9\\ \hline
+                [13-14)&67&14&53&15\\ \hline
+                [14-15)&102&23&79&20\\ \hline
+                [15-16)&100&19&81&16\\ \hline
+                [16-17)&84&18&66&16\\ \hline
+                [17-18)&63&10&53&14\\ \hline
+                [18-19)&95&21&74&18\\ \hline
+                [19-20)&62&19&43&20\\ \hline
+                [20-21)&44&19&25&19\\ \hline
+                [21-24]&41&23&18&10\\ \hline
+			\end{tabular}
+			\caption{Resultados del test final en función de la distancia relativa a la fuente.}
+			\label{tablaTestFuente}
+			\end{scriptsize}
+			\end{center}	
+		\end{table}
+		
+		Para el cálculo de ambas distancias, se ha generado un script en Python que extrae la información de la posición de recepción de cada fichero de audio que se encuentra en el nombre de dicho archivo y las distancias medidas presencialmente en el auditorio (toda esta información se comentó en el apartado de ``Toma de datos'').
+		
+		Tomando esta información se hace el cálculo de las distancias para todos los casos que se han producido durante la realización de los test y que han quedado recogidas en el fichero csv. En la figura X se puede observar un ejemplo gráfico sobre cómo se han calculado dichas distancias y en el anexo X se puede consultar el código de Python en su totalidad.
+
+\end{document}
