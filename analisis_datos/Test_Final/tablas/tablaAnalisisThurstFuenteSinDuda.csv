@@ -1,0 +1,15 @@
+Distancia [m]&total&correct&protocol&dprime&se.dprime\\ \hline
+[6-8)&11&8&twoAFC&0.855&0.571\\ \hline
+[8-10)&30&22&twoAFC&0.881&0.347\\ \hline
+[10-11)&23&17&twoAFC&0.906&0.399\\ \hline
+[11-12)&40&34&twoAFC&1.466&0.342\\ \hline
+[12-13)&47&36&twoAFC&1.026&0.285\\ \hline
+[13-14)&52&44&twoAFC&1.443&0.298\\ \hline
+[14-15)&82&69&twoAFC&1.415&0.236\\ \hline
+[15-16)&84&69&twoAFC&1.302&0.226\\ \hline
+[16-17)&68&56&twoAFC&1.314&0.252\\ \hline
+[17-18)&49&42&twoAFC&1.51&0.313\\ \hline
+[18-19)&77&59&twoAFC&1.027&0.223\\ \hline
+[19-20)&42&34&twoAFC&1.239&0.315\\ \hline
+[20-21)&25&15&twoAFC&0.358&0.359\\ \hline
+[21-24]&31&14&twoAFC&0&NA\\ \hline

@@ -97,7 +97,7 @@
                 Horizontal y vertical&20&4&16&0.01\\ \hline
                 Misma posición&9&8&1&NO\\ \hline
 			\end{tabular}
-			\caption{Resultados del test previo.}
+			\caption{Resultados del test previo considerando las respuestas marcadas como ``Sin duda''.}
 			\label{tablaResultadosSinDuda}
 			\end{scriptsize}
 			\end{center}	
@@ -107,14 +107,280 @@
 		
 		Los valores obtenidos para $\alpha$-risk no son realmente importantes, puesto que el número de datos es relativamente pequeño y la repetición de dicho experimentos podría producir que dichos valores fluctuaran. No obstante, para este caso resultaba válido con obtener valores superiores y/o iguales a 0.1, que es lo que se ha obtenido.
 		
-		También se obtienen los resultados esperados para los casos en que ambos audios se encuentran en la misma posición, donde la amplia mayoría de las personas participantes no percibían los estímulos como diferentes.
+		También se obtienen los resultados esperados para los casos en que ambos audios se encuentran en la misma posición, donde la amplia mayoría de las personas participantes no percibían los estímulos como diferentes.\newpage
 		
     \subsection{Análisis del test final}
-    
-		
+        Para el análisis del test final, se realizan dos análisis de datos diferentes para cada una de las dos formas de agrupación de los datos (distancia relativa a la fuente y distancia relativa entre las dos posiciones de butacas). La primera mediante el seguimiento de la norma UNE-EN ISO 10399 que ya se utilizó en el test previo, mediante la tabla A.1 de la norma y la ecuación \ref{eq:alpha}.
+        
+        Por otro lado, se realiza un análisis mediante modelos thursthonianos. Para ello, se genera un script en el lenguaje de programación estadística ``R'' para utilizar el paquete ``SansR'' REFERENCIAR. Este paquete permite obtener de forma sencilla los valores del coeficiente $d'$, así como su desviación estandar. En el anexo X puede consultarse el código del script.
+        
+        
+		\subsubsection*{Distancia relativa a la fuente}
+		    Aplicando el mismo procedimiento explicado en apartado de ``Conceptos teóricos'', se obtienen las tablas \ref{tablaISOFuenteDuda} y \ref{tablaISOFuenteSinDuda} que muestras los resultados para el análisis mediante la norma UNE-EN ISO 10399 para todas las respuestas y sólo para las marcadas como ``sin duda'' respectivamente:
+		    
+		    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Resultados}&\textbf{Total iguales}&\textbf{Total diferentes}&\textbf{$\alpha$-Risk}\\ \hline
+                [6-8)&15&5&10&0.2\\ \hline
+                [8-10)&35&10&25&0.05\\ \hline
+                [10-11)&32&8&24&0.01\\ \hline
+                [11-12)&54&13&41&0.001\\ \hline
+                [12-13)&56&15&41&0.001\\ \hline
+                [13-14)&67&14&53&0.001\\ \hline
+                [14-15)&102&23&79&0.001\\ \hline
+                [15-16)&100&19&81&0.001\\ \hline
+                [16-17)&84&18&66&0.001\\ \hline
+                [17-18)&63&10&53&0.001\\ \hline
+                [18-19)&95&21&74&0.001\\ \hline
+                [19-20)&62&19&43&0.01\\ \hline
+                [20-21)&44&19&25&NO\\ \hline
+                [21-24]&41&23&18&NO\\ \hline
+			\end{tabular}
+			\caption{Valores de $\alpha$-risk para los resultados agrupados en función de la distancia a la fuente según la norma UNE-EN ISO 10399}
+			\label{tablaISOFuenteDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Resultados}&\textbf{Total iguales}&\textbf{Total diferentes}&\textbf{$\alpha$-Risk}\\ \hline
+                [6-8)&11&3&8&0.2\\ \hline
+                [8-10)&30&8&22&0.01\\ \hline
+                [10-11)&23&6&17&0.05\\ \hline
+                [11-12)&40&6&34&0.001\\ \hline
+                [12-13)&47&11&36&0.001\\ \hline
+                [13-14)&52&8&44&0.001\\ \hline
+                [14-15)&82&13&69&0.001\\ \hline
+                [15-16)&84&15&69&0.001\\ \hline
+                [16-17)&68&12&56&0.001\\ \hline
+                [17-18)&49&7&42&0.001\\ \hline
+                [18-19)&77&18&59&0.001\\ \hline
+                [19-20)&42&8&34&0.001\\ \hline
+                [20-21)&25&10&15&NO\\ \hline
+                [21-24]&31&17&14&NO\\ \hline
+			\end{tabular}
+			\caption{Valores de $\alpha$-risk para los resultados marcados como ``Sin duda'' agrupados en función de la distancia a la fuente según la norma UNE-EN ISO 10399}
+			\label{tablaISOFuenteSinDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    Por otro lado, utilizando el paquete ``sansR'' y el lenguaje de programación R, se obtienen las tablas \ref{tablaThurstFuenteDuda} y \ref{tablaThurstFuenteSinDuda}. Los mismos resultados pueden observarse de forma gráfica en las figuras \ref{fig:ThurstFuenteDuda} y \ref{fig:ThurstFuenteSinDuda}. Para obtener dichos resultados, en primer lugar se introduce el núemero total de respuestas, así como el número de respuestas ``correctas'' (entendiéndose como correctas aquellas respuestas en las que los participantes hayan identificado los estímulos como diferentes). A continuación, hay que indicar a la función qué tipo de test se ha realizado para que el cálculo de los coeficientes sea el correcto. En nuestro caso, el test se corresponde con un ``\textit{twoAFC}'', ya quel participante estaba forzado a seleccionar una de las dos opciones sin posibilidad de escoger una opción intermedia.\newline
+		    
+		    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c | c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Respuestas}&\textbf{Total diferentes}&\textbf{Protocolo}&\textbf{$d'$}&\textbf{$\sigma (d')$}\\ \hline
+                [6-8)&15&10&twoAFC&0.609&0.473\\ \hline
+                [8-10)&35&25&twoAFC&0.800&0.318\\ \hline
+                [10-11)&32&24&twoAFC&0.954&0.341\\ \hline
+                [11-12)&54&41&twoAFC&0.995&0.264\\ \hline
+                [12-13)&56&41&twoAFC&0.876&0.254\\ \hline
+                [13-14)&67&53&twoAFC&1.146&0.244\\ \hline
+                [14-15)&102&79&twoAFC&1.066&0.195\\ \hline
+                [15-16)&100&81&twoAFC&1.242&0.204\\ \hline
+                [16-17)&84&66&twoAFC&1.120&0.217\\ \hline
+                [17-18)&63&53&twoAFC&1.414&0.269\\ \hline
+                [18-19)&95&74&twoAFC&1.087&0.203\\ \hline
+                [19-20)&62&43&twoAFC&0.715&0.236\\ \hline
+                [20-21)&44&25&twoAFC&0.243&0.269\\ \hline
+                [21-24]&41&18&twoAFC&0.000&NA\\ \hline
+			\end{tabular}
+			\caption{Valores de $d'$ y su desviación estandar para los resultados agrupados en función de la distancia a la fuente aplicando modelos thursthonianos.}
+			\label{tablaThurstFuenteDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c | c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Respuestas}&\textbf{Total diferentes}&\textbf{Protocolo}&\textbf{$d'$}&\textbf{$\sigma (d')$}\\ \hline
+                [6-8)&11&8&twoAFC&0.855&0.571\\ \hline
+                [8-10)&30&22&twoAFC&0.881&0.347\\ \hline
+                [10-11)&23&17&twoAFC&0.906&0.399\\ \hline
+                [11-12)&40&34&twoAFC&1.466&0.342\\ \hline
+                [12-13)&47&36&twoAFC&1.026&0.285\\ \hline
+                [13-14)&52&44&twoAFC&1.443&0.298\\ \hline
+                [14-15)&82&69&twoAFC&1.415&0.236\\ \hline
+                [15-16)&84&69&twoAFC&1.302&0.226\\ \hline
+                [16-17)&68&56&twoAFC&1.314&0.252\\ \hline
+                [17-18)&49&42&twoAFC&1.51&0.313\\ \hline
+                [18-19)&77&59&twoAFC&1.027&0.223\\ \hline
+                [19-20)&42&34&twoAFC&1.239&0.315\\ \hline
+                [20-21)&25&15&twoAFC&0.358&0.359\\ \hline
+                [21-24]&31&14&twoAFC&0&NA\\ \hline
+			\end{tabular}
+			\caption{Valores de $d'$ y su desviación estandar para los resultados marcados como ``Sin duda'' agrupados en función de la distancia a la fuente aplicando modelos thursthonianos.}
+			\label{tablaThurstFuenteSinDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    \begin{figure}
+                \includegraphics[scale=0.7]{../imagenes/analisisThurstFuenteDuda.png}
+			    \centering
+			    \caption{Coeficientes $d'$ en función de la distancia a la fuente.} 
+			    \label{fig:ThurstFuenteDuda}
+            \end{figure}
             
+            \begin{figure}
+                \includegraphics[scale=0.7]{../imagenes/analisisThurstFuenteSinDuda.png}
+			    \centering
+			    \caption{Coeficientes $d'$ en función de la distancia a la fuente cuando las respuestas están marcadas como ``Sin duda''.} 
+			    \label{fig:ThurstFuenteSinDuda}
+            \end{figure}
+
+            Como se puede observar en las tablas y figuras antes mencionadas, el comportamiento para ambos procedimientos es bastante similar. Hay que tener en cuenta que para $\alpha$-risk, cuanto más pequeño es el valor, más estadísticamente representativa es la diferencia, mientras que para los modelos thursthonianos, se produce a la inversa; cuanto más grande es el valor de $d'$, más diferentes son los estímulos.
             
+            En ambos casos, se observa que las diferencias aumentan conforme aumenta la distancia respecto de la fuente, pero llegada una determinada distancia, las diferencias comienzan a dejar de ser perceptibles hasta llegar a posiciones donde las posibles diferencias pueden considerarse debidas al azar.
             
+            La mayor diferencia entre ambos sistemas se encuentra en lo que podríamos denominar como ``sensibilidad''. La norma UNE-EN ISO 10399 es menos sensible a las variaciones puntuales del número de respuestas consideradas correctas; además de que los cambios que se producen son mucho más abruptos ya que sólo existen cinco posibles valores para $\alpha$-risk (0.2, 0.05, 0.01, 0.001 y que no pueda obtenerse el valor).
+            
+            Los modelos thursthonianos, por otra parte, son mucho más sensibles, ya que ligeras variaciones en los resultados, producen variaciones en los valores de $d'$. Al mismo tiempo, se dispone de todo un rango contínuo de valores que dicho coeficiente puede obtener. Esto permite que las representaciones gráficas de las variaciones de $d'$ muestren mejor el comportamiento psicoacústico de los estímulos y analizar si existe una tendencia que estas pueden seguir, como es el caso de nuestro experimento.
+            
+            Un ejemplo de esto puede observarse en los casos de las tabals \ref{tablaISOFuenteDuda} y \ref{tablaThurstFuenteDuda}. En este caso, se ve como para el caso del análisis mediante la norma, el descenso se produce a partir de la distancia de [19-20) metros, mientras que en los modelos thursthonianos, el decaimiento se produce antes, a partir de la distancia [18-19) metros. Lo mismo ocurre con el caso de las tablas \ref{tablaISOFuenteSinDuda} y \ref{tablaThurstFuenteSinDuda}, donde los decaimientos vuelven a producirse en las mismas distancias.
+        
+        \subsubsection*{Distancia relativa entre butacas}
+            Para este apartado se vuelven a aplicar tanto los procedimientos de la norma UNE-EN ISO 10399, de las que se obtienen las tablas \ref{tablaISOButacasDuda} y \ref{tablaISOButacasSinDuda}, como de los modelos thusthonianos, de los que se obtienen las tablas \ref{tablaThurstButacasDuda} y \ref{tablaThurstButacasSinDuda}, y las figuras \ref{fig:ThurstButacasDuda} y \ref{fig:ThurstButacasSinDuda}. De nuevo, para los modelos thursthonianos, se ha determinado que el protocolo es ``\textit{twoAFC}'' para que la función de R pueda realizar de forma correcta la estimación del valor $d'$.\newline
+            
+            Como se puede observar en las tablas \ref{tablaISOButacasDuda} y \ref{tablaISOButacasSinDuda}, los participantes empiezan a notar diferencias a partir de que la distancia entre butacas se encuentra a partir de los [3-4) metros, aunque este efecto se retrasa hasta los [4-5) metros si suprimimos las respuestas marcadas como ``Con duda''. Una vez ahí, las diferencias se mantienen estadísticamente representativas con el máximo nivel de seguridad que ofrece la norma, ya que la probabilidad de que los eventos sean iguales cuando, en realidad, se han percibido como diferentes, es de 0.001. En los resultados obtenidos no hay un momento en el que dicha probabilidad decrezca.\newline
+            
+            \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Resultados}&\textbf{Total iguales}&\textbf{Total diferentes}&\textbf{$\alpha$-Risk}\\ \hline
+                (0-2)&61&40&21&NO\\ \hline
+                [2-3)&76&40&36&NO\\ \hline
+                [3-4)&102&47&55&0.05\\ \hline
+                [4-5)&111&30&81&0.001\\ \hline
+                [5-6)&95&24&71&0.001\\ \hline
+                [6-7)&78&11&67&0.001\\ \hline
+                [7-8)&70&9&61&0.001\\ \hline
+                [8-9)&52&4&48&0.001\\ \hline
+                [9-10)&62&3&59&0.001\\ \hline
+                [10-11)&47&1&46&0.001\\ \hline
+                [11-12)&33&1&32&0.001\\ \hline
+                [12-14)&33&1&32&0.001\\ \hline
+                [14-18)&24&0&24&0.001\\ \hline
+			\end{tabular}
+			\caption{Valores de $\alpha$-risk para los resultados agrupados en función de la distancia entre butacas según la norma UNE-EN ISO 10399}
+			\label{tablaISOButacasDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Resultados}&\textbf{Total iguales}&\textbf{Total diferentes}&\textbf{$\alpha$-Risk}\\ \hline
+                (0-2)&41&27&14&NO\\ \hline
+                [2-3)&49&29&20&NO\\ \hline
+                [3-4)&74&33&41&NO\\ \hline
+                [4-5)&79&17&62&0.001\\ \hline
+                [5-6)&65&15&50&0.001\\ \hline
+                [6-7)&62&5&57&0.001\\ \hline
+                [7-8)&64&7&57&0.001\\ \hline
+                [8-9)&40&1&39&0.001\\ \hline
+                [9-10)&53&2&51&0.001\\ \hline
+                [10-11)&44&1&43&0.001\\ \hline
+                [11-12)&31&1&30&0.001\\ \hline
+                [12-14)&32&0&32&0.001\\ \hline
+                [14-18)&23&0&23&0.001\\ \hline
+			\end{tabular}
+			\caption{Valores de $\alpha$-risk para los resultados agrupados en función de la distancia entre butacas según la norma UNE-EN ISO 10399 cuando los resultados son marcados como ``Sin duda''.}
+			\label{tablaISOButacasSinDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+            
+            \newpage
+            Por otro lado, las tablas \ref{tablaThurstButacasDuda} y \ref{tablaThurstButacasSinDuda}, así como las figuras \ref{fig:ThurstButacasDuda} y \ref{fig:ThurstButacasSinDuda} muestran un crecimiento más o menos constante del coeficiente $d'$ desde los [3-4) metros hasta el final. En el caso de incluir los resultados marcados como ``Con duda'' puede parecer que existe una bajada de la percepción de las diferencias, pero al observar los datos de la tabla se ve que ese decaimiento se debe a que se tienen menos datos en dichas posiciones y, por tanto, el hecho de que una persona determine que ha percibido los audios como iguales, hace que el valor del coeficiente baje. Esto se comprueba observando la tabla \ref{tablaThurstButacasSinDuda} y figura \ref{fig:ThurstButacasSinDuda} donde se han eliminado las respuestas dudosas y se observa un reforzamiento en la tendencia creciente en las distancias más lejanas.\newline
+            
+            \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c | c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Respuestas}&\textbf{Total diferentes}&\textbf{Protocolo}&\textbf{$d'$}&\textbf{$\sigma (d')$}\\ \hline
+                (0-2)&61&21&twoAFC&0.000&NA\\ \hline
+                [2-3)&76&36&twoAFC&0.000&NA\\ \hline
+                [3-4)&102&55&twoAFC&0.139&0.176\\ \hline
+                [4-5)&111&81&twoAFC&0.865&0.180\\ \hline
+                [5-6)&95&71&twoAFC&0.942&0.197\\ \hline
+                [6-7)&78&67&twoAFC&1.521&0.249\\ \hline
+                [7-8)&70&61&twoAFC&1.603&0.270\\ \hline
+                [8-9)&52&48&twoAFC&2.017&0.362\\ \hline
+                [9-10)&62&59&twoAFC&2.349&0.384\\ \hline
+                [10-11)&47&46&twoAFC&2.868&0.583\\ \hline
+                [11-12)&33&32&twoAFC&2.654&0.615\\ \hline
+                [12-14)&33&32&twoAFC&2.654&0.615\\ \hline
+                [14-18)&24&24&twoAFC&Inf&NA\\ \hline
+			\end{tabular}
+			\caption{Valores de $d'$ y su desviación estandar para los resultados agrupados en función de la distancia entre butacas aplicando modelos thursthonianos.}
+			\label{tablaThurstButacasDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    \begin{table}[H]
+			\begin{center}
+			\begin{scriptsize}
+			\begin{tabular}{| c | c | c | c || c | c |}
+			    \hline
+				\textbf{Distancia [m]}&\textbf{Respuestas}&\textbf{Total diferentes}&\textbf{Protocolo}&\textbf{$d'$}&\textbf{$\sigma (d')$}\\ \hline
+                (0-2)&41&14&twoAFC&0.000&NA\\ \hline
+                [2-3)&49&20&twoAFC&0.000&NA\\ \hline
+                [3-4)&74&41&twoAFC&0.192&0.207\\ \hline
+                [4-5)&79&62&twoAFC&1.115&0.224\\ \hline
+                [5-6)&65&50&twoAFC&1.041&0.243\\ \hline
+                [6-7)&62&57&twoAFC&1.981&0.327\\ \hline
+                [7-8)&64&57&twoAFC&1.739&0.295\\ \hline
+                [8-9)&40&39&twoAFC&2.772&0.597\\ \hline
+                [9-10)&53&51&twoAFC&2.514&0.450\\ \hline
+                [10-11)&44&43&twoAFC&2.829&0.589\\ \hline
+                [11-12)&31&30&twoAFC&2.614&0.621\\ \hline
+                [12-14)&32&32&twoAFC&Inf&NA\\ \hline
+                [14-18)&23&23&twoAFC&Inf&NA\\ \hline
+			\end{tabular}
+			\caption{Valores de $d'$ y su desviación estandar para los resultados marcados como ``Sin duda'' agrupados en función de la distancia entre butacas aplicando modelos thursthonianos.}
+			\label{tablaThurstButacasSinDuda}
+			\end{scriptsize}
+			\end{center}	
+		    \end{table}
+		    
+		    \begin{figure}
+                \includegraphics[scale=0.7]{../imagenes/analisisThurstButacasDuda.png}
+			    \centering
+			    \caption{Coeficientes $d'$ en función de la distancia entre butacas.} 
+			    \label{fig:ThurstButacasDuda}
+            \end{figure}
+            
+            \begin{figure}
+                \includegraphics[scale=0.7]{../imagenes/analisisThurstButacasSinDuda.png}
+			    \centering
+			    \caption{Coeficientes $d'$ en función de la distancia entre butacas cuando las respuestas están marcadas como ``Sin duda''.} 
+			    \label{fig:ThurstButacasSinDuda}
+            \end{figure}
+            
+            Al igual que ocurría con los resultados agrupados según la distancia a la fuente, se observa que, a pesar, de que el comportamiento es similar para ambas formas de analizar los datos, la norma UNE-EN ISO 10399 es mucho menos sensible a los pequeños cambios en los resultados; mientras que los modelos thursthonianos ofrecen un rango mayor de datos que fluctúan más facilmente. Esto no es necesariamente peor; depende de lo que se pretenda conseguir con el estudio. Si se pretende determinar a partir de qué distancias las diferencias son significativas, la norma da información más útil en este sentido. Por otro lado, si se pretende estudiar el comportamiento de las diferencias perceptuales en función de la distancia, aquí los modelos thursthonianos tienen una gran ventaja frente a la norma.
+		    
+		    
 \bibliography{biblio.bib}
 \bibliographystyle{ieeetr}    
 \end{document}
