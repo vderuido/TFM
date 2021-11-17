@@ -6,6 +6,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{float}
 \author{Víctor de Tejada Molera}
 \begin{document}
 \chapter{Toma de datos}
@@ -23,7 +24,7 @@
  
  			Las paredes del auditorio se encuentran recubiertas en su mayoría por paneles de madera, excepto por una ligera zona acristalada hacia la zona superior. Las puertas situadas en los laterales son metálicas. 
  
- 			La pared posterior, así como el resto de las paredes están compuestas principalmente de hydropanel y láminas de madera. En la parte trasera también se encuentra una pared metálica y una ventana cristalada que comunican con la sala de control.
+ 			La pared posterior, así como el resto de las paredes están compuestas principalmente de hydropanel y láminas de madera. En la parte trasera también se encuentra una pared metálica y una ventana acristalada que comunican con la sala de control.
  
  			El suelo de la zona más cercana al escenario está compuesto por láminas de madera, mientras que en la zona de butacas, se compone de linóleo.
  
@@ -90,7 +91,7 @@
 	    
 	        En la figura \ref{fig:equipos} se pueden observar imágenes sobre varios de dichos equipos, y en la figura \ref{fig:control} se muestra cómo se organiza la zona de control para la realización de las medidas ubicada dentro del mismo salón de actos.
 	    
-	        \begin{figure}
+	        \begin{figure}[H]
 	            \includegraphics[scale=0.6]{../imagenes/equipos.jpg}
 			    \centering
 			    \caption{De izquierda a derecha y arriba a abajo: Fuente dodecaédrica, disposición de los micrófonos de medida, tarjeta de sonido MOTU y amplificador de potencia Crown.}
@@ -127,17 +128,21 @@
                 El audio utilizado está obtenido de la página web de OpenAir de la universidad de York que incluye numerosos audios anecóicos de diferentes cateogrías y también respuestas impulsivas de diferente tipos de espacios grabados por todo el mundo. Particularmente, se escoge la grabación de una voz femenina haciendo una escala musical. Esto se corresponde con el uso principal del Salón de actos que consiste en conferencias y música de coro.
         
                 Para la auralización se utiliza el software de Cycling74 ``MaxMSP'' junto con el plugin de la Universidad de Huddersfield, ``\textit{HISSTOOLS}''. Este software permite realizar la convolución de la respuesta al impulso grabada con el audio anecoico de forma que se obtiene el audio auralizado que se desea. Para ello, se crea un pequeño script o ``\textit{patch}'' que realiza dicho procedimiento para todas las respuestas impulsivas previamente grabadas y se almacenan las convoluciones en una nueva carpeta de forma automática. Dicho \textit{patch} puede observarse en la siguiente figura \ref{fig:convolver_max}. Del mismo modo, se incluye una versión texto de dicho script en el Anexo XX.
+                
+                Por comodidad, se mantiene la misma numeración y terminología para los audios convolucionados que se había seguido para las grabaciones. Siendo la única diferencia la carpeta donde se almacenan.
         
-                \begin{figure}
+                \begin{figure}[H]
 	                \includegraphics[scale=0.4]{../imagenes/convolver_max.png}
 			        \centering
 			        \caption{Patch en MaxMSP para la convolución de las respuestas impulsivas con el audio anecoico.}
 			        \label{fig:convolver_max}
 	            \end{figure}
         
-                Por comodidad, se mantiene la misma numeración y terminología para los audios convolucionados que se había seguido para las grabaciones. Siendo la única diferencia la carpeta donde se almacenan.
+                \newpage
             
     \section{Segunda toma de datos}
+        Durante fases posteriores del proyecto, se localizó un error en el procesado de las señales que las hicieron inservibles para el propósito de nuestro proyecto. Debido a esto, y a la adquisición de unos micrófonos biaurales, se decidió realizar una nueva toma de datos con las que realizar el test subjetivo final.
+        
         
        \subsection{Numeración y selección de las butacas en la segunda toma de datos}
             Para la segunda toma de datos, se siguió la misma numeración que la vez anterior. Es decir, para las butacas normales, se sigue la estructura ``FxBy'' siendo ``x'' e ``y'' el número de fila y de butaca respectivamente tal y como ya se mostró en el apartado de la primera toma de datos.
@@ -152,7 +157,7 @@
         \subsection{Equipo utilizado para la segunda toma de datos}
             Para esta nueva toma de datos, la principal diferencia en torno al equipo utilizado se encuentra en los micrófonos utilizados. En este caso, se utilizaron unos micrófonos biaurales ``Roland CS-10EM''. Estos micrófonos tienen la particularidad de que tienen la forma de auriculares \textit{in-ear} y se conectan mediante un conector mini-jack estéreo. Estos micrófonos necesitan que se les suministe una alimentación de entre 2 y 5 Voltios, algo que no es posible en la tarjeta de sonido MOTU que se utilizó en la anterior toma de datos. Por este motivo, se realiza la grabación de las señales a través de una grabadora de audio externa que permite aplicar dicha alimentación. Para nuestro caso, se ha optado por una ``Yamaha pr7''. En la figura \ref{fig:microsBi} pueden observarse tanto los micrófonos como la grabadora.
                 
-            \begin{figure}
+            \begin{figure}[H]
                 \includegraphics[scale=0.3]{../imagenes/MicroBi.jpg}
                 \centering
                 \caption{Micrófonos biaurales Roland y grabadora Yamaha utilizada para la grabación de las respuestas.}

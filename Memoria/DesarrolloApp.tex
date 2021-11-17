@@ -6,6 +6,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{float}
 \author{Víctor de Tejada Molera}
 \begin{document}
     \chapter{Desarrollo de la aplicación del test subjetivo.}
@@ -51,17 +52,15 @@
             
             Esta configuración es la que se utiliza en el test previo. Al finalizar dicho test, se les pide a los participantes que propongan diferentes mejoras para perfeccionar la interfaz de usuario. Entre ellas, las más habituales consistieron en la sustitución de los \textit{toggles} por elementos más grandes al estilo de \textit{swithces} o interruptores y la actualización de la posición de dichos elementos a su estado inicial entre cada una de las preguntas.
             
-            Atendiendo a estas propuestas, se modifica la interfaz con el resultado que se muestra en la figura \ref{fig:uiFin}.
+            Atendiendo a estas propuestas, se modifica la interfaz con el resultado que se muestra en la figura \ref{fig:uiFin}. Así mismo, durante la creación de la interfaz, se planteó la posibilidad de generar un botón que permitiera seleccionar la carpeta de la que el programa extrae los audios, pero finalmente se rechazó porque aumentaba la complejidad tanto del \textit{script} como de la interfaz y, al realizar todos los participantes el test sobre el mismo ordenador, no aportaba ninguna funcionalidad de utilidad.
             
-            \begin{figure}
+            \begin{figure}[H]
                 \begin{center}
                     \includegraphics[scale=.6]{../imagenes/interFin.png}
                     \caption{Versión inicial de la interfaz de usuario.}
                     \label{fig:uiFin}
                 \end{center}
             \end{figure}
-            
-            Durante la creación de la interfaz, se planteó la posibilidad de generar un botón que permitiera seleccionar la carpeta de la que el programa extrae los audios, pero finalmente se rechazó porque aumentaba la complejidad tanto del \textit{script} como de la interfaz y, al realizar todos los participantes el test sobre el mismo ordenador, no aportaba ninguna funcionalidad de utilidad.
             
         \section{Codificación del script en Python}
             Para la codificación del \textit{script}, como ya se comentó anteriormente, se utilizó el entorno de desarrollo \textit{Gnome Builder}. Una de las ventajas que tiene este enterno es que incluye su propio terminal y herramientas de depuración y corrección de errores, además de la posibilidad de instalar las diferentes librerías que pudieran hacer falta para el desarrollo de las aplicaciones.
@@ -80,9 +79,7 @@
                 
                 A continuación, se encuentra una zona donde se definen diferentes funciones que serán usadas repetidamente a lo largo del \textit{script}. 
                 
-                Después, se definen algunas variables globales necesarias y da comienzo la clase \textit{Main} de la aplicación. En ella, se inicializan las referencias a los diferentes elementos de la interfaz gráfica con las que los usuarios interactúan y se establecen qué funciones se llaman en función de las señales que manejan. Estas funciones se definen en último lugar a continuación de dichas inicializaciones.
-                
-                En el anexo X se puede leer el código en su totalidad.
+                Después, se definen algunas variables globales necesarias y da comienzo la clase \textit{Main} de la aplicación. En ella, se inicializan las referencias a los diferentes elementos de la interfaz gráfica con las que los usuarios interactúan y se establecen qué funciones se llaman en función de las señales que manejan. Estas funciones se definen en último lugar a continuación de dichas inicializaciones. En el anexo X se puede leer el código en su totalidad.
                
         
 \bibliography{biblio.bib}
