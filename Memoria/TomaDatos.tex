@@ -21,9 +21,9 @@
  			El espacio tiene unas dimensiones de 25 metros de largo, por 13.64 metros de ancho. El auditorio tiene una altura aproximada de unos 5 metros. En la figura \ref{fig:auditorio} puede observarse la vista en planta de la sala junto a sus diferentes zonas.
  			
  			\begin{figure}
-				\includegraphics[scale=0.6]{../imagenes/auditorio.png}
+				\includegraphics[scale=0.6]{../imagenes/auditorioColor.png}
 				\centering
-				\caption{Vista en planta del auditorio de la ETSIST}
+				\caption{Vista en planta del auditorio de la ETSIST. La zona verde se corresponde con el escenario. La zona roja con el patio de butacas. La zona amarilla con los pasillos y zonas de paso. La zona azul son las bambalinas laterales. Las lineas discontínuas marcan la superficie de la concha acústica y los paneles de madera del techo.}
 				\label{fig:auditorio}
 			\end{figure}
  
@@ -71,7 +71,7 @@
 		    Con esta forma de numeración de butacas, se puede proceder a la selección de las diferentes posiciones en las que se obtienen las respuestas impulsivas de la sala. Para el caso de este proyecto, se ha supuesto que el salón de actos es simétrico en la parte izquierda y derecha. Por este motivo, se han determinado posiciones en la parte par de la sala. Después, se ha distribuido el área seleccionando una butaca y dejando butacas libres antes de seleccionar la siguiente posición para cada fila. Así mismo, para la fila siguiente no se selecciona la butaca que está en frente de la seleccionada, sino la inmediatamente a continuación a su derecha. De esta forma, se consigue un muestreo más uniforme de la sala. En total se tomaron 100 grabaciones en esta primera toma de datos y en la figura \ref{fig:butacasMarcadas} puede observarse un esquema con dicha distribución. 
 		
 		    \begin{figure}
-	            \includegraphics[scale=0.1]{../imagenes/auditorio_butacas_marcadas}
+	            \includegraphics[scale=0.1]{../imagenes/auditorio_butacas_marcadas.png}
 			    \centering
 			    \caption{Distribución de las posiciones de grabación de las respuestas impulsivas. El cuadrado azul marca la posición de la fuente de sonido y los círculos rojos las posiciones de los micrófonos.}
 			    \label{fig:butacasMarcadas}
@@ -130,7 +130,7 @@
             Al  final del proceso de toma de datos, se obtuvieron un total de 100 archivos de audio en formato ``.wav'' con la respuesta al impulso obtenida en cada una de las posiciones.
             
             \section{Procesado de los datos - Auralizaciones}
-                Una vez obtenidos los datos, se planteó la cuestión sobre qué tipo de audio sería más conveniente: si las respuestas al impulso o bien dichas respuestas convolucionadas con otros audios anecoicos (también conocido como audios \textit{auralizados}). Para el caso de este proyecto, se optó en un primer momento por la segunda opción por varios motivos.
+                Una vez obtenidos los datos, se planteó la cuestión sobre qué tipo de audio sería más conveniente: si las respuestas al impulso o bien dichas respuestas convolucionadas con otros audios anecoicos (también conocido como audios \textit{auralizados}). En un primer momento se optó por la segunda opción por varios motivos.
         
                 El primero es que las personas están más acostumbradas a escuchar, y por tanto comparar, sonidos de carácter más melódico que se alejan de las respuestas al impulso, las cuales son parecidas al producido por un disparo.
         
@@ -138,18 +138,18 @@
         
                 El audio utilizado está obtenido de la página web de OpenAir de la universidad de York que incluye numerosos audios anecóicos de diferentes cateogrías y también respuestas impulsivas de diferente tipos de espacios grabados por todo el mundo. Particularmente, se escoge la grabación de una voz femenina haciendo una escala musical. Esto se corresponde con el uso principal del Salón de actos que consiste en conferencias y música de coro.
         
-                Para la auralización se utiliza el software de Cycling74 ``MaxMSP'' junto con el plugin de la Universidad de Huddersfield, ``\textit{HISSTOOLS}''. Este software permite realizar la convolución de la respuesta al impulso grabada con el audio anecoico de forma que se obtiene el audio auralizado que se desea. Para ello, se crea un pequeño script o ``\textit{patch}'' que realiza dicho procedimiento para todas las respuestas impulsivas previamente grabadas y se almacenan las convoluciones en una nueva carpeta de forma automática. Dicho \textit{patch} puede observarse en la siguiente figura \ref{fig:convolver_max}. Del mismo modo, se incluye una versión texto de dicho script en el Anexo XX.
+                Para la auralización se utiliza el software de Cycling74 ``MaxMSP'' junto con el plugin de la Universidad de Huddersfield, ``\textit{HISSTOOLS}''. Este programa permite realizar la convolución de la respuesta al impulso grabada con el audio anecoico de forma que se obtiene el audio auralizado que se desea. Para ello, se crea un pequeño script o ``\textit{patch}'' que realiza dicho procedimiento para todas las respuestas impulsivas previamente grabadas y se almacenan las convoluciones en una nueva carpeta de forma automática. Dicho \textit{patch} puede observarse en la siguiente figura \ref{fig:convolver_max}. Del mismo modo, se incluye una versión texto de dicho script en el Anexo XX.
                 
                 Por comodidad, se mantiene la misma numeración y terminología para los audios convolucionados que se había seguido para las grabaciones; siendo la única diferencia la carpeta donde se almacenan.
         
-                \begin{figure}[H]
+                \begin{figure}
 	                \includegraphics[scale=0.4]{../imagenes/convolver_max.png}
 			        \centering
 			        \caption{Patch en MaxMSP para la convolución de las respuestas impulsivas con el audio anecoico.}
 			        \label{fig:convolver_max}
 	            \end{figure}
         
-                \newpage
+                Al final este procesado no se realizó para la segunda toma de datos y, por consiguiente, en el test final. Esto se debe a que el proceso de auralización puede incluir una serie de variables aleatorias adicionales que pueden condicionar los resultados. Además, para la detección de diferencias perceptuales, que es el objetivo del proyecto, las respuestas al impulso tienen suficiente información acústica para realizar el proyecto. Este sistema cuenta con la ventaja adicional de que la duración de las señales es menor, por lo que se reduce la posibilidad de que los participantes experimenten fatiga auditiva durante la realización del test.
             
     \section{Segunda toma de datos}
         Durante fases posteriores del proyecto, se localizó un error en el procesado de las señales que las hicieron inservibles para el propósito de nuestro proyecto. Debido a esto, y a la adquisición de unos micrófonos biaurales, se decidió realizar una nueva toma de datos con las que realizar el test subjetivo final.
@@ -227,7 +227,7 @@
         Para un correcto análisis de los resultados, es necesario realizar una serie de medidas en el auditorio. Esto nos permite, más adelante, poder organizar los resultados en función de diferentes referencias y ver si existe alguna relación entre ellas. En nuestro caso, hemos considerado como importantes las distancias de la fuente dodecaédrica a la primera butaca, la distancia entre filas, entre butacas, el ancho del pasillo, entre otras. Las distancias que se midieron pueden observarse en la figura \ref{fig:distancias} y el resto pueden obtenerse a partir de las que ahí vienen reflejadas.
         
         \begin{figure}
-                \includegraphics[scale=0.5]{../imagenes/AuditorioMedidasButacas.pdf}
+                \includegraphics[scale=0.4]{../imagenes/AuditorioMedidasButacas.pdf}
                 \centering
                 \caption{Medidas de distancias tomadas dentro del auditorio.}
                 \label{fig:distancias}
