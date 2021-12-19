@@ -13,9 +13,9 @@
         En este capítulo se explican las herramientas y lenguajes utilizados para la creación de la aplicación de escritorio con la que se realizan posteriormente los test subjetivos de audio necesarios para el proyecto. Así mismo, se explica el algoritmo utilizado y las diferentes versiones utilizadas para la creación de la interfaz de usuario.
         
         \section{Lenguajes y programas utilizados}
-            Para el desarrollo de la aplicación, se ha optado por utilizar el lenguaje de programación Python3. Este lenguaje tiene la ventaja de que incluye numerosas librerías que permiten trabajar con interfaces gráficas con las que los participantes de los test puedan interactuar de forma sencilla. Para nuestro caso particular, se ha optado por utilizar la librería del entorno gráfico GTK (la librería se llama PyGObject) que es una de las más utilizadas en entornos Linux, aunque también puede utilizarse en entornos de Windows o Mac.
+            Para el desarrollo de la aplicación, se ha optado por utilizar el lenguaje de programación Python3. Este lenguaje tiene la ventaja de que incluye numerosas librerías que permiten trabajar con interfaces gráficas con las que los participantes de los test puedan interactuar de forma sencilla. Para nuestro caso particular, se ha optado por utilizar la librería del entorno gráfico GTK (la librería se llama \textit{PyGObject}\footnote{https://pygobject.readthedocs.io/en/latest/}) que es una de las más utilizadas en entornos Linux, aunque también puede utilizarse en entornos de Windows o Mac.
             
-            Para el diseño de la interfaz, se podría haber codificado diréctamente en lenguaje python. No obstante, se ha utilizado el programa Glade que permite utilizar un entorno gráfico para la creación de todos los elementos de la interfaz. Con dicho programa se obtiene un fichero xml con extensión ``.glade'' que es el que el \textit{script} de Python lee y con el que se genera la interfaz que el usuario utiliza. En la figura \ref{fig:gladeInic} se puede observar la pantalla de inicio de dicho programa. 
+            Para el diseño de la interfaz, se podría haber codificado diréctamente en lenguaje python. No obstante, se ha utilizado el programa Glade que permite utilizar un entorno gráfico para la creación de todos los elementos de la interfaz. Con dicho programa se obtiene un fichero XML con extensión ``.glade'' que es el que el \textit{script} de Python lee y con el que se genera la interfaz que el usuario utiliza. En la figura \ref{fig:gladeInic} se puede observar la pantalla de inicio de dicho programa. 
             
             \begin{figure}
                 \begin{center}
@@ -32,7 +32,7 @@
             \begin{figure}
                 \begin{center}
                     \includegraphics[scale=.2]{../imagenes/builderIni.png}
-                    \caption{Captura del programa Gnome Builder.}
+                    \caption{Captura del programa \textit{Gnome Builder}.}
                     \label{fig:builderIni}
                 \end{center}
             \end{figure}
@@ -67,7 +67,13 @@
             
             Una vez, se ha comprobado que este \textit{script} funciona, se modifica el mismo haciendo que las diferentes funciones sean llamadas por los diferentes elementos de la interfaz de usuario ya creada y que se referencian dentro del código de Python.
             
-            Durante todo el proceso, las consultas a la documentación de la API de Python para GTK \cite{GTKAPI} y de las diferentes librerías necesarias para el desarrollo de la aplicación. COMPLETAR CON LIBRERIAS
+            Durante todo el proceso, se realizaron consultas a la documentación de la API de Python para GTK\footnote{https://python-gtk-3-tutorial.readthedocs.io/en/latest/} y de las diferentes librerías necesarias para el desarrollo de la aplicación. Varios ejemplos de estas librerías son:
+            \begin{itemize}
+                \item \textbf{numpy}\footnote{https://numpy.org/}: para el trabajo con matrices al estilo de programas como \textit{Matlab}.
+                \item \textbf{pandas}\footnote{https://pandas.pydata.org/}: para la edición y creación de estructuras de datos.
+                \item \textbf{os}\footnote{https://docs.python.org/3/library/os.html}: para la navegación dentro de sistemas de ficheros del sistema operativo.
+                \item \textbf{gi}\footnote{https://pygobject.readthedocs.io/en/latest/guide/api/api.html}: para el manejo de los elementos gráficos y la gestión de sus señales.
+            \end{itemize}
             
             Por último durante el periodo de tiempo entre los dos tests subjetivos de audio se añadió la funcionalidad que permitía reproducir los dos audios pulsando las teclas ``1'' y ``2'' del teclado respectivamente sin necesidad de utilizar el ratón. Esta funcionalidad se incorporó como sugerencia por parte de varias de las personas participantes que comunicaron las dificultades de escuchar los audios con los ojos cerrados (decisión personal) al tener que pinchar los botones con el ratón del ordenador.
             

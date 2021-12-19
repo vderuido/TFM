@@ -9,9 +9,16 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \author{Víctor de Tejada Molera}
 \begin{document}
-    \chapter{Realización de los tests subjetivos de audio}
+    \chapter{Realización de los test subjetivos de audio}
+        Como ya se comentó en el capítulo de ``Introducción'', el objetivo del proyecto es el de analizar las diferencias perceptuales que se obtienen al escuchar las respuestas al impulso obtenidas al modificar la posición de escucha o recepción dentro de un determinado espacio.
+        
+        Para simplificar la toma de datos del estudio, se parte de la premisa de que los oyentes perciben diferencias sonoras en función de la distancia a la que se encuentre la fuente sonora del receptor, pero que dichas percepciones son similares para posiciones simétricas dentro del espacio de estudio.
+        
+        Para validar esta hipótesis, que permitiría que las muestras recogidas se fueran de sólo la mitad del auditorio, se plantea un test previo que se describe en el apartado ``Test preliminar''
+        
+        Una vez comprobada la hipótesis y realizada toda la adquisición de todos los datos necesarios, se diseña un segundo test más completo y con una interfaz de usuario más refinada a partir de las experiencias adquiridas en el test anterior. No obstante, debido a una error en el procesado de los datos, se estimó conveniente repetir la toma de datos y realizar dicho test de nuevo. En el apartado ``Características de los test finales''
         \section{Test preliminar}
-            En primer lugar se plantea la realización de un pequeño test subjetivo de audio cuyo objetivo es la comprobación rápida de que la hipótesis de partida es correcta. Esta hipótesis es que los oyentes perciben de forma distinta el sonido en función de la distancia de la que se encuentren de una fuente sonora y que dicha percepción es suficientemente similar para posiciones simétricas dentro del espacio de estudio. Es decir, que las dimensiones y características de la sala permitan que la distancia sea un factor perceptible por los oyentes y que el salón de actos sea lo suficientemente simétrico para poder simplificar la toma de respuestas al impulso.
+            En este apartado se explican las características del test previo que se realiza para determinar que la hipótesis inicial de que las dimensiones y características de la sala permitan que la distancia sea un factor perceptible por los oyentes y que el auditorio sea lo suficientemente simétrico para poder simplificar la toma de respuestas al impulso.
             
             \subsection{Características del test previo}
                 Para la realización de este test, se ha optado por seguir las recomendaciones propuestas en \cite{Tejada2020}. Para ello, el proyecto propone responder a las siguientes preguntas:
@@ -19,7 +26,15 @@
                     \item \textbf{¿En qué categoría se engloba el estudio?}: Para responder a esta pregunta, hay que observar las diferentes categorías que se presentan en el artículo (REFERENCIA). Para el caso de este test, el que más se corresponde es el de Sensibilidad, puesto que el objetivo es ver si las personas participantes tienen la capacidad para distinguir si los sonidos son iguales o no.
                     \item \textbf{¿Qué tipo de test es el más adecuado?}: Para los objetivos de este test, se ha optado por un test 2-AFC también conocido como \textit{Same/Different}. Este tipo de test obliga al participante a elegir entre dos opciones; en nuestro caso, si los audios que se presentan son iguales o diferentes. Esto tiene la ventaja de que es fácil de codificar y analizar estadísticamente aunque no da mucha información concreta, pero es suficiente para el objetivo del test.
                     \item \textbf{¿Participantes expertos o inexpertos?,¿cuántos necesito?}: Como este test no es el definitivo, sino que se trata de una comprobación previa, no se han considerado requisitos tan estrictos como los que se hubieran seguido de otra forma. Por este motivo, se ha optado por utilizar participantes con y sin experiencia. El número total de participantes ha sido de 10 que es lo mínimo que se ha utilizado en algunos test de temática similar \cite{2019MNowak}.
-                    \item \textbf{¿Qué tipo de señal utilizo?}: En nuestro caso, se utilizan las respuestas al impulso convolucionadas obtenidas previamente del salón de actos siguiendo el procedimiento seguido en el capítulo de "Toma de datos". En concreto para este experimento se han utilizado las respuestas de las zonas más cercanas y lejanas a la fuente en las posiciones centrales y de los extremos laterales tanto izquierdo como derecho. AÑADIR FIGURA
+                    \item \textbf{¿Qué tipo de señal utilizo?}: En nuestro caso, se utilizan las respuestas al impulso convolucionadas obtenidas previamente del salón de actos siguiendo el procedimiento seguido en el capítulo de "Toma de datos". En concreto para este experimento se han utilizado las respuestas de las zonas más cercanas y lejanas a la fuente en las posiciones centrales y de los extremos laterales tanto izquierdo como derecho. En la figura \ref{fig:posicionesTestPrueba} se muestran las posiciones que formaban parte del test.
+                    
+                    \begin{figure}
+                    \includegraphics[scale=0.1]{../imagenes/auditorio_butacas_prueba.png}
+			        \centering
+			        \caption{Posiciones de las grabaciones utilizadas para el test de prueba.}
+			        \label{fig:posicionesTestPrueba}
+                \end{figure}
+                    
                     \item \textbf{¿Cuál es tipo de análisis de datos?}: Para el análisis de los datos, se ha optado por realizar un análisis del coeficiente $\alpha$ de acuerdo con las especificaciones de la norma ISO-10399 \cite{ISO10399}. En dicha norma, se proporciona una tabla que muestra el número de respuestas correctas necesarias para concluir que dos eventos son diferentes con una determinada incertidumbre para un determinado número de respuestas totales.
                 \end{itemize}
  
@@ -35,7 +50,8 @@
 			        \label{fig:interfazInicial}
                 \end{figure}
                 
-        \section{Experimentos finales}        
+        \section{Experimentos finales}
+            En este apartado se analizan las características y procedimientos utilizado en los experimentos finales.     
             
             \subsection{Características de los test finales}
                 Como ya se comentó en el análisis del estado del arte, no existe un consenso sobre la mejor forma de realizar un test subjetivo de audio. Algunos estudios como \cite{Tejada2020}, \cite{delaPrida2019} y \cite{delaPrida2021} hacen sugerencias sobre qué características pueden funcionar mejor en función de lo que se pretenda analizar en dicho test. Para nuestro caso particular, se ha vuelto a optar por seguir las recomendaciones propuestas en \cite{Tejada2020} respondiendo a las preguntas que en él se plantean. Como ya se comentó en el apartado de ``Toma de datos'', se tuvieron que repetir los test de audio debido a un fallo en el procesado de las grabaciones. A pesar de esto, las características de ambas pruebas son prácticamente idénticas. Por este motivo, se engloban todas ellas en el mismo apartado. Dentro de cada subapartado se comentan, si existen, las diferencias que pueda haber entre ambos.
@@ -52,7 +68,8 @@
                     Para el segundo test, se optó por utilizar diréctamente las respuestas al impulso obtenidas tras el procesado que realiza el software \textit{Dirac}, como ya se explica también en el apartado de ``Toma de datos''. En este caso, se utilizan un total de 83 archivos distintos de 2 segundos de duración. Al igual que en la prueba anterior, la duración se encuentra dentro de los límites marcados por \cite{UIT1116, UIT1534, UIT1284, EBU3286, UIT1285, UIT1286}, así como otros estudios para evitar la fatiga auditiva y que los participantes se acostumbren a los estímulos.
                 
                     Para la realización de ambos experimentos, el volumen al cual se reproducen las señales no es relevante, siempre y cuando no se modifique a lo largo de toda la sesión; por lo que el participante puede escoger el que le sea más cómodo, con la única restricción de que el volumen debe ser el mismo para la escucha de los dos audios que conforman cada pregunta.
-                    \item \textbf{¿Cuál es el tipo de análisis de datos?} COMPLETAR
+                    \item \textbf{¿Cuál es el tipo de análisis de datos?}: para los test finales se han optado por dos análisis diferentes. Por un lado, se mantiene el análisis del coeficiente $\alpha$ siguiendo las especificicaciones de la norma ISO-10399\cite{ISO10399} y las tablas que ofrece en sus anexos. Por otro lado, se realiza un análisis mediante la utilización de modelos thursthonianos. Estos modelos permiten obtener un coeficiente llamado $d'$ el cual aporta información cuantitativa sobre una determinada información subjetiva (en este caso, lo diferentes que son un grupo de parejas de audios). En el capítulo de ``Estado del arte'' se dispone de información más concreta sobre estos modelos. Ambos análisis, el de norma ISO-10399 y los modelos thursthonianos se realizan para dos diferentes disposiciones de los datos: según la distancia del punto medio de la posición de los dos audios respecto de la fuente, y según la distancia a la que se encuentre la posición de ambos audios.
+                     
                 \end{itemize}
             \subsection{Procedimiento del test final}
         
@@ -98,7 +115,7 @@
                     \begin{figure}
                         \includegraphics[scale=0.45]{../imagenes/participantes.png}
 			            \centering
-			            \caption{Varios de los participantes durante el transcurso de los tests.}
+			            \caption{Varios de los participantes durante el transcurso de los test.}
 			            \label{fig:participantes}
                     \end{figure}
             
