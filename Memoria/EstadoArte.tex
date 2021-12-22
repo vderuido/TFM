@@ -3,9 +3,12 @@
 \usepackage[spanish]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{graphicx}
 \usepackage{amssymb}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{cite}
+\usepackage{babelbib}
+\usepackage{float}
 \author{Víctor de Tejada Molera}
 
 \begin{document}
@@ -18,32 +21,54 @@
     
     Utilizando estos medios, se han consultado alrededor de 30 documentos entre libros de referencia, normativas internacionales, artículos en revistas y congresos, trabajos de fin de grado, etc. En ellos, como se menciona en \cite{Tejada2020}, las características de los test subjetivos aplicados son muy diferentes entre sí e incluyen una gran variedad en cuanto al número de participantes o procedimientos se refiere.
     
-    \section{Características de la documentación consultada} REVISAR
+    \section{Análisis de la documentación consultada}
     
-    Al analizar los distintos documentos, se ha observado una inconsistencia notable en el número de personas que realizan los estudios. Por un lado, se tienen estudios que utilizan un número muy pequeño de personas, diez o menos, como es el caso de \cite{2019MNowak}. Por otro lado, algunos casos presentan números mucho mayores llegando a utilizar casi cien personas, como ocurre en \cite{1954JEgan}. 
+    Al observar los distintos documentos, se ha observado una gran inconsistencia en las características de los diferentes estudios que se han analizado. En este apartado se analizan las características de los proyectos y normativas según varios de sus aspectos más representativos. 
     
-    Por otro lado, se ha observado una gran variedad de formatos para hacer los test. Los más habituales se presentan a continuación.
     
-    \begin{itemize}
-        \item \textbf{Test de diferencias}: En este tipo de test al oyente se le presentan 2 o más audios y tiene que determinar si son iguales o no. Tiene la ventaja de que son sencillos de implementar y de analizar. En algunos sitios, se le llama ``Duo'' o ``binomial'' por lo que es importante revisarlos a conciencia para no confundirlos con los ``Duo-Trio'' o un ``ABX''.
-        \item \textbf{Test Duo-Trio}: Para este formato, se presentan tres audios. Uno de ellos es igual a  uno de los otros dos que se denomina ``Referencia''. El objetivo del oyente es determinar cuál de los audios que se le presenta es igual a dicha referencia.
-        \item \textbf{Test de escalas numéricas}: El objetivo de este test es que el oyente cuantifique alguna determinada característica de las señales de audio mediante una escala numérica. Algunas variantes permiten que se realice la cuantificación de varios elementos en paralelo o que se pida que se ordenen varios audios simultáneamente en función de la característica que se pretenda evaluar (Test de MUSHRA).
-        \item \textbf{ABX}: En este tipo de test se presentan tres señales. El oyente tiene que determinar cuál de las dos primeras que se le presentan es igual a la que es presentada en último lugar. El experimento se repite varias veces modificando la última señal para que no sea siempre el mismo audio. 
-    \end{itemize}
-    Existen otros tipos de test como los triangulares o los A/NotA que se reflejan y explican en \cite{delaPrida2021}. No obstante, no se han encontrado experimentos en los que se aplique dicha metodología, a parte de ese artículo, por lo que no se han considerado para las siguientes partes del proyecto.
     
-    Cada uno de los tipos de test mencionandos arriba tienen sus propias particularidades, sus ventajas y sus inconvenientes tanto para su realización como para el análisis de sus resultados.
+	    \subsection{Número de participantes}
+    		Si se analizan las características de las personas que participan en los test perceptuales, se observa una gran variedad tanto en el número como en su experiencia. 
+    		
+    		Por un lado, se tienen estudios que utilizan un número muy pequeño de personas, diez o menos, como es el caso de \cite{2019MNowak}. Por otro lado, algunos casos presentan números mucho mayores llegando a utilizar casi cien personas, como ocurre en \cite{1954JEgan}. También se observa que el número de participantes varía en función del aspecto subjetivo que pretenda analizarse \cite{Tejada2020}; de esta forma, los estudios que estudian la molestia acústica son los que utilizan un mayor número de participantes (en torno a los 30-40 según \cite{Tejada2020}), mientras que el resto utilizan unas 20 personas aproximadamente, que se corresponde con las recomendaciones de las normativas \cite{UIT1116, UIT1284, UIT1534}.
+
+            Otro aspecto importante muy relacionado con el número de participantes consiste en la utilización de participantes con o sin experiencia en este tipo de experimentos psicoacústicos. Normativas como \cite{UIT1116, UIT1284, UIT1534} recomiendan la utilización de participantes con experiencia cuando los aspectos a analizar son bastante técnicos o requieren de personas con oídos especializados en la detección de ciertos eventos. No obstante, aceptan la presencia de participantes sin experiencia si se aumenta el número total de personas que participan en el experimento o si se les aplica algún tipo de entrenamiento previo, incluso se recomienda realizarlo para participantes con experiencia.
+
+            A pesar de estas recomendaciones, la realidad es bastante diversas en la que se encuentran estudios como \cite{1995GASoulodre,1999JBradley, 2005IWitew, 2010FMartellotta, 2010MVigeant, 1997SCarlile, 2011VEmiya, 2016BPostma, 2019ZShao, 2019VRajala, 2019MShiell, 2019JGroose, Braun2004, delaPrida2019, delaPrida2021} en los que sí se aplican entrenamientos previos, mientras que en otros estudios como \cite{Brockhoff2009,2019LKritly,2019DMorikawa, 2019DJSchlit} no se realizan. También se han encontrado varios estudios en los que no se reflejaba si se habían realizado estos entrenamientos o no \cite{2002PZahorik, 2016SKlockgether, 2019GPulvirenti,2019MNowak, 2019MYamada, 2019JLee, Christensen2009}.
     
-    A nivel de interacción por parte de la persona participante, existe división de opiniones sobre la posibilidad del usuario de repetir la reproducción de los estímulos o incluso la capacidad de escoger cuándo se reproducen diréctamente. No obstante, normas como \cite{UIT1116,UIT1534, UIT1284,EBU3286, UIT1285, UIT1286} recomiendan que los participantes tengan, siempre que sea posible, la capacidad de interactuar con los estímulos de forma directa y repetir su reproducción si así lo desean.
+	    \subsection{Interacción por parte del participante}
+    		A nivel de interacción por parte de la persona participante, existe división de opiniones sobre la posibilidad del usuario de poder controlar la reproducción de los estímulos \cite{1995GASoulodre, 2010FMartellotta, 2010MVigeant, 2011VEmiya,2019DMorikawa} frente a \cite{1999JBradley, 2002PZahorik, 2005IWitew, 2016SKlockgether, 2019VRajala, 2019VHongisto} No obstante, normas como \cite{UIT1116,UIT1534, UIT1284,EBU3286, UIT1285, UIT1286} recomiendan que los participantes tengan, siempre que sea posible, la capacidad de interactuar con los estímulos de forma directa y repetir su reproducción si así lo desean.
+
+	    \subsection{Aspectos subjetivos a analizar}
+		    Los aspectos subjetivos que se pueden analizar mediante test perceptuales son muy variados. Por un lado algunos experimentos como en \cite{1995GASoulodre, 2016SKlockgether,  2016BPostma, 2002PZahorik} se centran en estudiar las características relacionadas con la reverberación de las salas (persistencia del sonido, diferencias entre sonidos anecoicos y reverberantes, etc.). Otros estudios se centran en el estudio d ela inteligibilidad de diferentes señales acústicas \cite{ 1999JBradley, 2010FMartellotta,  2010MVigeant}, mientras otras se centran en temas de localización de sonora \cite{1997SCarlile, 2019MShiell, 2019MYamada, 2019DMorikawa}. También se encuentran aquellos experimentos en los que se pretende estudiar características como las diferencias entre señales, la sonoridad o diferencias de nivel \cite{2019GPulvirenti, 2016SKlockgether, 2019MNowak, 2011VEmiya, 2019LKritly, 2005IWitew,  2019DJSchlit}. Por último, una de las áreas que está teniendo más importancia en los últimos años se corresponden con el estudio de la molestia acústica \cite{2019VHongisto, 2019JLee, 2019VRajala}.
+		    
+            Algunos documentos com \cite{Tejada2020} tratan de ordenar estos documentos en diferentes categorías y facilitar el análisis de grandes cantidades de documentos y extraer sus elementos comunes.
+
+	    \subsection{Tipos de test}
+    		Por otro lado, se ha observado una gran variedad de formatos para hacer los test. Los más habituales se presentan a continuación.
     
-    En cuanto a la duración de los estímulos, se han observado que los valores suelen rondar los 8-10 segundos, obteniéndose casos con un máximo de 15 segundos como en \cite{2005IWitew}. Esto concuerda con las recomendaciones de \cite{UIT1116,UIT1534, UIT1284,EBU3286, UIT1285, UIT1286} al respecto donde se indica que la duración de dichos estímulos debe ser lo suficientemente reducida para evitar que los participantes se acostumbren a las señales. Unido a esto, la duración total de la sesión, a pesar de ser el apartado del que menos información se aporta, se recomienda que no exceda de los 30 minutos, siendo necesaria la inclusión de descansos de la misma duración, si se tiene que alargar. Esto ocurre en casos como \cite{2019LKritly} donde se tiene una duración de casi 90 minutos.
+    		\begin{itemize}
+        		\item \textbf{Test de diferencias}: En este tipo de test al oyente se le presentan 2 o más audios y tiene que determinar si son iguales o no. Tiene la ventaja de que son sencillos de implementar y de analizar. En algunos sitios, se le llama ``Duo'' o ``binomial'' por lo que es importante revisarlos a conciencia para no confundirlos con los ``Duo-Trio'' o un ``ABX''. Algunos de los artículos en los que han aplicado este tipo de test son \cite{1995GASoulodre, 1999JBradley,2002PZahorik, 2005IWitew, 2010MVigeant, 2019LKritly}.
+        		\item \textbf{Test Duo-Trio}: Para este formato, se presentan tres audios. Uno de ellos es igual a  uno de los otros dos que se denomina ``Referencia''. El objetivo del oyente es determinar cuál de los audios que se le presenta es igual a dicha referencia. Algunos de los proyectos que han utilizado este tipo de test son \cite{delaPrida2019, delaPrida2021}.
+        		\item \textbf{Test de escalas numéricas}: El objetivo de este test es que el oyente cuantifique alguna determinada característica de las señales de audio mediante una escala numérica. Algunas variantes permiten que se realice la cuantificación de varios elementos en paralelo o que se pida que se ordenen varios audios simultáneamente en función de la característica que se pretenda evaluar (Test de MUSHRA \cite{UIT1534}). Este tipo de test son muy útiles y aparecen como recomendación por parte de normativas internacionales \cite{UIT1116, UIT1284, UIT1534}.También aparecen en algunos documentos como \cite{2011VEmiya,2016BPostma, 2019ZShao,2019GPulvirenti,2019VRajala, 2019JLee, 2019DMorikawa}. 
+        		\item \textbf{ABX}: En este tipo de test se presentan tres señales. El oyente tiene que determinar cuál de las dos primeras que se le presentan es igual a la que es presentada en último lugar. El experimento se repite varias veces modificando la última señal para que no sea siempre el mismo audio. Algunos ejemplos donde se aplican este tipo de test se encuentran en \cite{delaPrida2021, Braun2004}.
+    		\end{itemize}
+    		Existen otros tipos de test como los triangulares o los A/NotA que se reflejan y explican en \cite{delaPrida2021, Brockhoff2009}. No obstante, no se han encontrado experimentos en los que se aplique dicha metodología, a parte de ese artículo, por lo que no se han considerado para las siguientes partes del proyecto.
     
-    En cuanto al análisis de los datos, históricamente se han utilizado procedimientos como los análisis de la varianza (ANOVA), o normas como \cite{ISO10399}. No obstante, en estudios más recientes como \cite{delaPrida2021} y \cite{delaPrida2019} aparecen los modelos thursthonianos como una alternativa sencilla de aplicar y con cualidades que pueden resultar útiles para ciertos tipos de estudio.\newline
+    		Cada uno de los tipos de test mencionandos arriba tienen sus propias particularidades, sus ventajas y sus inconvenientes tanto para su realización como para el análisis de sus resultados.
     
-    A la vista de todo lo expuesto, queda patente la gran variedad de sistemas que se siguen en la actualidad para realizar los test perceptuales. Por ello, para nuestro test es necesario identificar sus particularidades para poder determinar las características que mejor se ajusten al mismo.
+	
+
+        \subsection{Duración del experimento}
+    		En cuanto a la duración de los estímulos, se han observado que los valores suelen rondar de 1 a 5 segundos \cite{2010FMartellotta, 2016SKlockgether, 2011VEmiya, 2019LKritly, 2019GPulvirenti, 2002PZahorik, 2019MShiell, 2019JGroose, 2019MNowak, 2019MYamada, 2019DMorikawa, 2019DJSchlit}. No obstante, también se han encontrado estudios donde la duración se encuentra entre los 8-10 segundos \cite{2010FMartellotta, 2019JLee, 2010MVigeant}, obteniéndose casos con un máximo de 15 segundos como en \cite{1995GASoulodre, 2005IWitew}. Esto concuerda con las recomendaciones de \cite{UIT1116,UIT1534, UIT1284,EBU3286, UIT1285, UIT1286} al respecto donde se indica que la duración de dichos estímulos debe ser lo suficientemente reducida para evitar que los participantes se acostumbren a las señales \cite{GelfandStanley}. Unido a esto, la duración total de la sesión, a pesar de ser el apartado del que menos información se aporta, se recomienda que no exceda de los 30 minutos , siendo necesaria la inclusión de descansos de la misma duración, si se tiene que alargar \cite{UIT1116, UIT1284, UIT1534, ZwickerFactsModels, GelfandStanley, BlauertSpatialHearing}. Esto ocurre en casos como \cite{2019LKritly} donde se tiene una duración de casi 90 minutos.
+    
+	    \subsection{Análisis de los datos}
+    		En cuanto al análisis de los datos, históricamente se han utilizado procedimientos como los análisis de la varianza (ANOVA) \cite{2011VEmiya, 2016BPostma, 2019LKritly, 2019GPulvirenti, 2019MShiell, 2019VHongisto}, o normas como \cite{ISO10399}. No obstante, en estudios más recientes como \cite{delaPrida2019, delaPrida2021} aparecen los modelos thursthonianos como una alternativa sencilla de aplicar y con cualidades que pueden resultar útiles para ciertos tipos de estudio.\newline
+    
+    A la vista de todo lo expuesto, queda patente la gran variedad de sistemas que se siguen en la actualidad para realizar los test perceptuales. Por ello, para nuestro test es necesario identificar sus particularidades para poder determinar las características que mejor se ajusten al mismo. 
     
     \section{Conceptos teóricos para el análisis estadístico}    
-        \subsection*{UNE-EN ISO 10399}
+        \subsection{UNE-EN ISO 10399}
             La norma UNE-EN ISO 10399: ``Análisis sensorial. Metodología. Ensayo Duo-Trio.''\cite{ISO10399} es un documento que permite analizar la probabilidad de que eventos perceptuales sean percibidos como iguales o diferentes según el número de respuestas definidas como correctas y/o erróneas al realizar experimentos basados en test duo-trio.
         
             Para ello, en primer lugar se definen diferentes términos que aparecen de forma constante a lo largo de la norma. Para nuestro caso particular, los términos más relevantes son:
@@ -75,21 +100,42 @@
                     
                 \end{itemize}
             \end{itemize}
-        \subsection*{Modelos Thursthonianos}
-            Los modelos Thursthonianos son modelos estadísticos en el que se utilizan variables de distribuciones normales y que se utilizan en gran medida en estudios de discriminación sensorial. 
             
-            En el caso concreto de la psicoacústica, se utiliza generalmente para obtener un valor ``$d'$'' que da información ordenada y cuantitativa sobre una determinada percepción subjetiva. Además de este valor, se calcula a su vez la desviación estandar ``$\sigma$''. Con estos dos valores, se puede aproximar un conjunto de distribuciones como una sucesión de distribuciones gaussianas en las que en función del valor ``$d'$''y ``$\sigma$'' están más o menos superpuestas. Esta superposición da información sobre la probabilidad de que ambos estímulos puedan ser distinguibles o no entre sí y cuánto. Esto se observa más fácilmente en la figura \ref{fig:modelost} obtenida en \cite{PsychophysicsB} 
+            Un ejemplo de aplicación para conocer el coeficiente $\alpha$-risk sería el siguiente: Suponemos que tenemos un caso de estudio entre dos señales acústicas.  Se ha realizado un test perceptual y se han obtenido 100 respuestas, 87 de las cuales se ha obtenido que las dos señales son diferentes.
             
-            \begin{figure}
+            En primer lugar, se acude a la tabla del Anexo A.1 para comprobar si están los datos para ese número de respuestas. En este caso, se comprueba que, desgraciadamente, la tabla sólo arroja datos hata las 88 respuestas, por lo que se procede a resolver la ecuación \ref{eq:alpha}. Sustituyendo las variables por los datos que se tienen, se obtienen 5 valores diferentes de x para cada uno de los posibles valores de $\alpha$:
+            \begin{itemize}
+                \item $x=55$ para $\alpha=0.20$.
+                \item $x=57$ para $\alpha=0.10$.
+                \item $x=59$ para $\alpha=0.05$.
+                \item $x=62$ para $\alpha=0.01$.
+                \item $x=66$ para $\alpha=0.001$.
+            \end{itemize}
+            Es importante remarcar que los resultados siempre se redondean hacia arriba, puesto que es imposible tener fracciones de respuestas.
+            
+            Una vez obtenidos los valores, el valor de $\alpha$ se corresponde con el del caso más cercano que sea inferior a nuestro número de respuestas diferentes. En nuestro caso, $\alpha=0.001$ ya que 66 es el número más cercano a 87 (y además se cumple de que es menor).
+            
+            Como ya se explicó anteriormente, el coeficiente $\alpha$-risk muestra la probabilidad de que dos eventos sean diferentes cuando, en realidad, son iguales. Por este motivo, cuanto más pequeño es el valor del coeficiente, más estadísticamente representativa es la diferencia perceptual. Por este motivo, en estudios como el nuestro, se busca obtener valores pequeños.
+            
+            Puede ocurrir que se obtengan situaciones donde el número de respuestas en las que se han indicado que son diferentes sea menor que para el caso de $\alpha=0.20$ (en el ejemplo anterior, si se hubiera obtenido menos de 55 respuestas marcadas como diferentes). Si este fuera el caso, no se podría concluir que estadísticamente la percepción de dichos estímulos es diferente. En todo caso, habría que concluir que las posibles diferencias son debidas al azar. 
+            
+        \subsection{Modelos Thursthonianos}
+            Los modelos Thursthonianos\cite{PsychophysicsB, SignalB, delaPrida2019} son modelos estadísticos en los que se utilizan variables de distribuciones normales y que se utilizan en gran medida en estudios de discriminación sensorial. 
+            
+            En el caso concreto de la psicoacústica, se utilizan generalmente para obtener un valor ``$d'$'' que da información ordenada y cuantitativa sobre una determinada percepción subjetiva. Además de este valor, se calcula a su vez la desviación estandar ``$\sigma$''. Con estos dos valores, se puede aproximar las respuestas de un test subjetivo como una sucesión de distribuciones gaussianas en las que en función del valor ``$d'$''y ``$\sigma$'' están más o menos superpuestas. Esta superposición da información sobre la probabilidad de que ambos estímulos puedan ser distinguibles o no entre sí y cuánto. Esto se observa más fácilmente en la figura \ref{fig:modelost} obtenida en \cite{PsychophysicsB}.
+            
+            \begin{figure}[H]
                 \includegraphics[scale=0.7]{../imagenes/modelosthurst.png}
 			    \centering
-			    \caption{Ejemplo de cálculo de d' utilizando modelos thursthonianos. Fte: \cite{PsychophysicsB} }
+			    \caption{Ejemplo de cálculo de $d'$ utilizando modelos thursthonianos. Fte: \cite{PsychophysicsB} }
 			    \label{fig:modelost}
             \end{figure}
             
-            Además de lo ya expuesto, este tipo de análisis es especialmente interesante porque nos permite ordenar los valores obtenidos para $d'$ de forma que las diferencias entre ellos nos da información cuantitativa sobre cómo de diferentes o de similares son cada una de las distribuciones. Con la facilidad añadida que tiene este sistema para representar gráficamente mediante las técnicas habituales como diagramas de barras, entre otros.
+            Utilizando la figura \ref{fig:modelost} como ejemplo, se puede suponer que S1 y S2 son las distribuciones obtenidas de las respuestas de un test en las que S1 son las respuestas en las que dos estímulos han sido identificados como iguales, mientras que S2 se corresponde con las respuestas cuando los dos estímulos se identifican como diferentes. Cuanto más se solapen ambas distribuciones, más difícil será para los participantes distinguirlas. Gráficamente resulta fácil comprobar que las variables que determinan este solapamiento es principalemente $d'$, sin dejar de lado la importancia que tiene la desviación estándar $\sigma$.
+            
+            Además de lo ya expuesto, este tipo de análisis es especialmente interesante porque nos permite ordenar los valores obtenidos para $d'$ de forma que las diferencias entre ellos nos da información cuantitativa sobre cómo de diferentes o de similares son cada una de las distribuciones. Con la facilidad añadida que tiene este sistema para representar gráficamente mediante las técnicas habituales como diagramas de barras, entre otros. También tiene la ventaja de que el valor del coeficiente $d'$ es independiente del tipo de test que se realice, incluso es posible compararlos entre sí \cite{delaPrida2021}.
     
     
     \bibliography{biblio}
-    \bibliographystyle{ieeetr}
+    \bibliographystyle{babunsrt}
 \end{document}

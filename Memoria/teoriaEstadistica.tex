@@ -18,7 +18,7 @@
             
         Aplicando dichos recursos se obtienen las tablas \ref{tablaResultadosDuda} y \ref{tablaResultadosSinDuda} en la que se incluyen todas las respuestas y únicamente las que se marcaron como ``seguras'' por parte de los participantes respectivamente:
             
-        \begin{table}
+        \begin{table}[H]
 	    \begin{center}
 		\begin{scriptsize}
 		\begin{tabular}{| c | c | c | c || c |}
@@ -36,7 +36,7 @@
 		\end{center}	
 		\end{table}	
 		
-		\begin{table}
+		\begin{table}[H]
 			\begin{center}
 			\begin{scriptsize}
 			\begin{tabular}{| c | c | c | c || c |}
@@ -68,7 +68,7 @@
 		\subsection{Distancia relativa a la fuente}
 		    Aplicando el mismo procedimiento explicado en apartado de ``Conceptos teóricos'', se obtienen los resultados para el análisis mediante la norma UNE-EN ISO 10399 para todas las respuestas y sólo para las marcadas como ``sin duda'', respectivamente. También se utiliza el lenguaje de programación R y el paquete antes mencionado y así obtener el coeficiente $d'$ y su desviación estándar ($\sigma$). Todos los valores de ambos análisis están representados en las tablas \ref{tablaFuenteDuda} y \ref{tablaFuenteSinDuda}. Para la parte del análisis mediante modelos thursthonianos se generan además las figuras \ref{fig:ThurstFuenteDuda} y \ref{fig:ThurstFuenteSinDuda} que muestran de forma gráfica la variación de dicho coeficiente. El procedimiento para obtener el análisis con ``R'' es el siguiente: en primer lugar se introduce el núemero total de respuestas, así como el número de respuestas ``correctas'' (entendiéndose como correctas aquellas respuestas en las que los participantes hayan identificado los estímulos como diferentes). A continuación, hay que indicar a la función qué tipo de test se ha realizado para que el cálculo de los coeficientes sea el correcto. En nuestro caso, el test se corresponde con un ``\textit{2-AFC}'', ya quel participante estaba forzado a seleccionar una de las dos opciones sin posibilidad de escoger una opción intermedia.
 		    
-		    \begin{table}
+		    \begin{table}[H]
 			\begin{center}
 			\begin{scriptsize}
 			\begin{tabular}{| c | c | c | c || c | c | c |}
@@ -95,7 +95,7 @@
 			\end{center}	
 		    \end{table}
 		    
-		    \begin{table}
+		    \begin{table}[H]
 			\begin{center}
 			\begin{scriptsize}
 			\begin{tabular}{| c | c | c | c || c | c | c |}
@@ -124,14 +124,14 @@
 		    
 		    
 		    
-		    \begin{figure}
+		    \begin{figure}[H]
                 \includegraphics[scale=0.7]{../imagenes/analisisThurstFuenteDuda.png}
 			    \centering
 			    \caption{Coeficientes $d'$ en función de la distancia a la fuente.} 
 			    \label{fig:ThurstFuenteDuda}
             \end{figure}
             
-            \begin{figure}
+            \begin{figure}[H]
                 \includegraphics[scale=0.7]{../imagenes/analisisThurstFuenteSinDuda.png}
 			    \centering
 			    \caption{Coeficientes $d'$ en función de la distancia a la fuente cuando las respuestas están marcadas como ``Sin duda''.} 
@@ -148,7 +148,7 @@
             
             Un ejemplo de esto puede observarse en los casos de la tabla \ref{tablaFuenteDuda}. En esta tabla, se ve como para el caso del análisis mediante la norma, el descenso se produce a partir de la distancia de [19-20) metros, mientras que en los modelos thursthonianos, el decaimiento se produce antes, a partir de la distancia [18-19) metros. Lo mismo ocurre con el caso de la tabla \ref{tablaFuenteSinDuda}, donde los decaimientos vuelven a producirse en las mismas distancias. Para tener una idea de este comportamiento sobre el espacio del auditorio, se presenta la figura \ref{fig:dprimeauditorio}, donde se representa el comportamiento de $d'$ (la percepción de diferencia entre parejas de estímulos) en función de dicha distancia en la fuente, pero representado sobre el plano del auditorio directamente mediante un diagrama de colores en el que las zonas verdes representan valores bajos de dichas diferencias perceptuales y las zonas rojas representan valores elevados. Las zonas sin pintar corresponden a zonas donde o bien no se han tomado medidas, o bien el valor de las diferencias perceptuales ($d'$) es nulo.
             
-            \begin{figure}
+            \begin{figure}[H]
                 \includegraphics[scale=0.9]{../imagenes/auditoriodprime.png}
 			    \centering
 			    \caption{Coeficientes $d'$ en función de la distancia a la fuente representado sobre el plano del auditorio. Los valores verdes representan un valor bajo de $d'$; mientras que los rojos representan valores elevados.} 
@@ -156,11 +156,11 @@
             \end{figure}
         
         \subsection{Distancia relativa entre butacas}
-            Para este apartado se vuelven a aplicar tanto los procedimientos de la norma UNE-EN ISO 10399, como los modelos thusthonianos. De ambos análisis se obtienen las tablas \ref{tablaButacasDuda} y \ref{tablaButacasSinDuda}, así como las figuras \ref{fig:ThurstButacasDuda} y \ref{fig:ThurstButacasSinDuda}. De nuevo, para los modelos thursthonianos, se ha determinado que el protocolo es ``\textit{twoAFC}'' para que la función de R pueda realizar de forma correcta la estimación del valor $d'$.
+            Para este apartado se vuelven a aplicar tanto los procedimientos de la norma UNE-EN ISO 10399, como los modelos thusthonianos. De ambos análisis se obtienen las tablas \ref{tablaButacasDuda} y \ref{tablaButacasSinDuda}, así como las figuras \ref{fig:ThurstButacasDuda} y \ref{fig:ThurstButacasSinDuda}. De nuevo, para los modelos thursthonianos, se ha determinado que el protocolo es ``\textit{2-AFC}'' para que la función de R pueda realizar de forma correcta la estimación del valor $d'$.
             
             Como se puede observar en las tablas recien mencionadas, los participantes empiezan a notar diferencias a partir de que la distancia entre butacas se encuentra a partir de los [3-4) metros, aunque este efecto se retrasa hasta los [4-5) metros si suprimimos las respuestas marcadas como ``Con duda''. Una vez ahí, las diferencias se mantienen estadísticamente representativas con el máximo nivel de seguridad que ofrece la norma, ya que la probabilidad de que los eventos sean iguales cuando, en realidad, se han percibido como diferentes, es de 0.001. En los resultados obtenidos no hay un momento en el que dicha probabilidad decrezca.
             
-            \begin{table}
+            \begin{table}[H]
 			\begin{center}
 			\begin{scriptsize}
 			\begin{tabular}{| c | c | c | c || c | c | c |}
@@ -186,7 +186,7 @@
 			\end{center}	
 		    \end{table}
 		    
-		    \begin{table}
+		    \begin{table}[H]
 			\begin{center}
 			\begin{scriptsize}
 			\begin{tabular}{| c | c | c | c || c | c | c |}
@@ -212,7 +212,7 @@
 			\end{center}	
 		    \end{table}
             
-            \newpage
+            
             Por otro lado, la tabla \ref{tablaButacasDuda}, así como la figura \ref{fig:ThurstButacasDuda}, muestran, para el análisis mediante modelos thursthonianos, un crecimiento más o menos constante del coeficiente $d'$ desde los [3-4) metros hasta el final. En este caso, en el que están incluidos los resultados marcados como ``Con duda'', puede parecer que existe una bajada de la percepción de las diferencias, pero al observar los datos de la tabla, se ve que ese decaimiento se debe a que se tienen menos datos en dichas posiciones y, por tanto, el hecho de que una persona determine que ha percibido los audios como iguales, hace que el valor del coeficiente baje. Esto se comprueba observando la tabla \ref{tablaButacasSinDuda} y figura \ref{fig:ThurstButacasSinDuda} donde se han eliminado las respuestas dudosas y se observa un reforzamiento en la tendencia creciente en las distancias más lejanas.
 		    
 		    \begin{figure}

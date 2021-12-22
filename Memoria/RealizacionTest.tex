@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage{cite}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{float}
 \author{Víctor de Tejada Molera}
 \begin{document}
     \chapter{Realización de los test subjetivos de audio}
@@ -28,7 +29,7 @@
                     \item \textbf{¿Participantes expertos o inexpertos?,¿cuántos necesito?}: Como este test no es el definitivo, sino que se trata de una comprobación previa, no se han considerado requisitos tan estrictos como los que se hubieran seguido de otra forma. Por este motivo, se ha optado por utilizar participantes con y sin experiencia. El número total de participantes ha sido de 10 que es lo mínimo que se ha utilizado en algunos test de temática similar \cite{2019MNowak}.
                     \item \textbf{¿Qué tipo de señal utilizo?}: En nuestro caso, se utilizan las respuestas al impulso convolucionadas obtenidas previamente del salón de actos siguiendo el procedimiento seguido en el capítulo de "Toma de datos". En concreto para este experimento se han utilizado las respuestas de las zonas más cercanas y lejanas a la fuente en las posiciones centrales y de los extremos laterales tanto izquierdo como derecho. En la figura \ref{fig:posicionesTestPrueba} se muestran las posiciones que formaban parte del test.
                     
-                    \begin{figure}
+                    \begin{figure}[H]
                     \includegraphics[scale=0.1]{../imagenes/auditorio_butacas_prueba.png}
 			        \centering
 			        \caption{Posiciones de las grabaciones utilizadas para el test de prueba.}
@@ -43,7 +44,7 @@
                 
                 El equipo utilizado consistió en un ordenador portátil con sistema operativo Debian con 12GB de memoria RAM y unos auriculares Tascam-TH02. La escucha de los diferentes audios y la inclusión de las respuestas se realiza mediante una interfaz gráfica diseñada en el lenguaje de programación Python utilizando la librería de código abierto GTK, como ya se explicó en el apartado ``Desarrollo de aplicación en Python''. En la figura \ref{fig:interfazInicial} se puede observar la interfaz utilizada en el test previo. Previa a las escuchas por parte de los participantes, se aseguró de que las señales se reprodujeran con un nivel adecuado. Al principio del test, se les explicaba a los participantes las carácterísticas del test que iban a relizar, así como el número de preguntas y en qué propiedades debían fijarse para facilitarles su realización. También se les pedía que leyeran y firmara un ``consentimiento informado'' cuya estructura puede consultarse en el anexo X. Una vez finalizada la realización del test y ,debido al carácter no definitivo del mismo, se les preguntó sobre posibles mejoras que se podían hacer para facilitar su realización como cambios en la interfaz gráfica, la inclusión de audios de ejemplo, etc.
                 
-                 \begin{figure}
+                 \begin{figure}[H]
                     \includegraphics[scale=0.6]{../imagenes/uiIni.png}
 			        \centering
 			        \caption{Interfaz gráfica para la realización del test previo.}
@@ -90,7 +91,7 @@
                 
                     A continuación daba comienzo el test con el tutorial. En él se le presentan al participante tres de las posibilidades que podría encontrarse (que los audios fueran de la misma posición, que fueran de filas distintas y que fueran de butacas distintas de la misma fila). Como el objetivo de este tutorial es que sepan identificar qué aspectos determinan que dos audios sean iguales o diferentes, para los tres casos se optó por utilizar casos críticos, estos son aquellos que se utilizaban las mismas posiciones que en el test previo, donde las posiciones estaban lo más separadas posibles (ver figura X). La reproducción de los audios se podía repetir el número de veces que se considerara necesario. En la figura \ref{fig:interfazTutorial} puede observarse la interfaz de dicha parte.
                 
-                    \begin{figure}
+                    \begin{figure}[H]
                         \includegraphics[scale=0.6]{../imagenes/interfaz_tutorial.png}
 			            \centering
 			            \caption{Aapriencia del entrenamiento previo}
@@ -101,7 +102,7 @@
                 
                     En esta segunda parte al usuario se le presentan dos audios convolucionados de forma aleatoria y debe determinar si lo que percibe son dos audios que suenan igual o no. Por otro lado, el participante debe especificar si se encuentra seguro de su respuesta. El usuario puede repetir la reproducción de los audios las veces que quiera, pero debe esperar a que el audio termine de reproducirse antes de poder escoger si repetirlo o escuchar el otro audio. No existe la opción de ``No sabe/no contesta'', por lo que en caso de no poder decidirse, el usuario debe escoger una de las dos opciones de forma aleatoria y marcar la opción de ``no seguro''. Una vez ha decidido su respuesta, debe pinchar en el botón de ``Enviar respuesta'' para que se le presenten los dos siguientes audios. Esto permite que, en caso de duda, los participantes puedan modificar su respuesta hasta que pulsen dicho botón. A partir de ahí, no se permite volver atrás o modificar las respuestas. El experimento termina tras las 25 rondas de preguntas. Una vez terminada esta parte, el trabajo de las personas voluntarias ha terminado y pueden marcharse para dar comienzo el de la siguiente persona. En la figura \ref{fig:interfazTestFin} puede observarse la interfaz utilizada para la realización de esta segunda parte.
                 
-                    \begin{figure}
+                    \begin{figure}[H]
                         \includegraphics[scale=0.6]{../imagenes/interFin.png}
 			            \centering
 			            \caption{Apariencia de la interfaz del test.}
