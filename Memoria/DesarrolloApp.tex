@@ -15,9 +15,9 @@
         \section{Lenguajes y programas utilizados}
             Para el desarrollo de la aplicación, se ha optado por utilizar el lenguaje de programación Python3. Este lenguaje tiene la ventaja de que incluye numerosas librerías que permiten trabajar con interfaces gráficas con las que los participantes de los test puedan interactuar de forma sencilla. Para nuestro caso particular, se ha optado por utilizar la librería del entorno gráfico GTK (la librería se llama \textit{PyGObject}\footnote{https://pygobject.readthedocs.io/en/latest/}) que es una de las más utilizadas en entornos Linux, aunque también puede utilizarse en entornos de Windows o Mac.
             
-            Para el diseño de la interfaz, se podría haber codificado diréctamente en lenguaje python. No obstante, se ha utilizado el programa Glade que permite utilizar un entorno gráfico para la creación de todos los elementos de la interfaz. Con dicho programa se obtiene un fichero XML con extensión ``.glade'' que es el que el \textit{script} de Python lee y con el que se genera la interfaz que el usuario utiliza. En la figura \ref{fig:gladeInic} se puede observar la pantalla de inicio de dicho programa. 
+            Para el diseño de la interfaz, se podría haber codificado diréctamente en lenguaje python. No obstante, se ha utilizado el programa \textit{Glade}\footnote{https://glade.gnome.org/} que permite utilizar un entorno gráfico para la creación de todos los elementos de la interfaz. Con dicho programa se obtiene un fichero XML con extensión ``.glade'' que es el que el \textit{script} de Python lee y con el que se genera la interfaz que el usuario utiliza. En la figura \ref{fig:gladeInic} se puede observar la pantalla de inicio de dicho programa. 
             
-            \begin{figure}
+            \begin{figure}[H]
                 \begin{center}
                     \includegraphics[scale=.2]{../imagenes/gladeInicio.png}
                     \caption{Ventana de inicio del programa \textit{Glade}.}
@@ -27,7 +27,7 @@
             
            \newpage
 
-           Para la codificación de los scripts de Python se ha utilizado el programa ``\textit{Gnome Builder}''; un entorno de aplicaciones que incluye todas las herramientas para depurar, compilar y ejecutar los scripts dentro del mismo espacio. Al igual que con \textit{Glade}, el programa es gratuito de código abierto. En la figura \ref{fig:builderIni} se encuentra una captura de la interfaz del programa.
+           Para la codificación de los scripts de Python se ha utilizado el programa \textit{Gnome Builder}\footnote{https://apps.gnome.org/app/org.gnome.Builder/}; un entorno de aplicaciones que incluye todas las herramientas para depurar, compilar y ejecutar los scripts dentro del mismo espacio. Al igual que con \textit{Glade}, el programa es gratuito de código abierto. En la figura \ref{fig:builderIni} se encuentra una captura de la interfaz del programa.
            
             \begin{figure}[H]
                 \begin{center}
@@ -38,9 +38,9 @@
             \end{figure}
             
         \section{Características de la interfaz de usuario}
-            Como se ha comentado en el apartado anterior, la interfaz de usuario se ha diseñado utilizando el programa ``\textit{Glade}''. Desde un principio, se ha querido diseñar una interfaz que sea lo más simple posible, no sólo por facilidad para realizarla, sino para que las personas participantes puedan centrarse exclusivamente en los aspectos del test y hacer que su uso no suponga ninguna dificultad.  
+            Como se ha comentado en el apartado anterior, la interfaz de usuario se ha diseñado utilizando el programa \textit{Glade}. Desde un principio, se ha querido diseñar una interfaz que sea lo más simple posible, no sólo por facilidad para realizarla, sino para que las personas participantes puedan centrarse exclusivamente en los objetivos del test y hacer que su uso no suponga ninguna dificultad.  
             
-            En una primera instancia se decidió generar una interfaz en la que los elementos principales fueran dos botones con los que el usuario pudiera escoger cuál de los audios quería reproducir. Las respuestas se recogerían en dos casillas, o \textit{toggles}. También se incluyó un botón en la parte inferior para enviar cada una de las respuestas. En la parte superior se incluye un texto que indica el número de pregunta por la que va el test. Todos estos elementos se pueden observar en la figura \ref{fig:uiIni}.
+            En una primera instancia se decidió generar una interfaz en la que los elementos principales fueran dos botones con los que el usuario pudiera escoger cuál de los audios quería reproducir. Las respuestas se recogerían en dos casillas de verificación, o \textit{toggles}. También se incluyó un botón en la parte inferior para enviar cada una de las respuestas. En la parte superior se incluye un texto que indica el número de pregunta por la que va el test. Todos estos elementos se pueden observar en la figura \ref{fig:uiIni}.
             
             \begin{figure}[H]
                 \begin{center}
@@ -50,13 +50,13 @@
                 \end{center}
             \end{figure}
             
-            Esta configuración es la que se utiliza en el test previo. Al finalizar dicho test, se les pidió a los participantes que propongan diferentes mejoras para perfeccionar la interfaz de usuario. Entre ellas, las más habituales consistieron en la sustitución de los \textit{toggles} por elementos más grandes al estilo de \textit{switches} o interruptores y la actualización de la posición de dichos elementos a su estado inicial entre cada una de las preguntas.
+            Esta configuración es la que se utiliza en el test previo. Al finalizar dicho test, se les pidió a los participantes que propusieran diferentes mejoras para perfeccionar la interfaz de usuario. Entre ellas, las más habituales consistieron en la sustitución de los \textit{toggles} por elementos más grandes al estilo de \textit{switches} o interruptores y la actualización de la posición de dichos elementos a su estado inicial entre cada una de las preguntas.
             Atendiendo a estas propuestas, se modifica la interfaz con el resultado que se muestra en la figura \ref{fig:uiFin}.
             
             \begin{figure}
                 \begin{center}
                     \includegraphics[scale=.6]{../imagenes/interFin.png}
-                    \caption{Versión inicial de la interfaz de usuario.}
+                    \caption{Versión final de la interfaz de usuario.}
                     \label{fig:uiFin}
                 \end{center}
             \end{figure}
@@ -64,7 +64,7 @@
         \section{Codificación del script en Python}            
             El procedimiento seguido para la codificación de la aplicación ha sido gradual. En primer lugar se han diseñado diferentes métodos y funciones que se apliquen diréctamente desde la consola. De esta forma, se comprueba que el algoritmo funciona correctamente y que se extraen los resultados en el formato deseado.
             
-            Una vez, se ha comprobado que este \textit{script} funciona, se modifica el mismo haciendo que las diferentes funciones sean llamadas por los diferentes elementos de la interfaz de usuario ya creada y que se referencian dentro del código de Python.
+            Una vez, se ha comprobado que este \textit{script} funciona, se modifica el mismo haciendo que las funciones sean llamadas por los diferentes elementos de la interfaz de usuario ya creada y que se referencian dentro del código de Python.
             
             Durante todo el proceso, se realizaron consultas a la documentación de la API de Python para GTK\footnote{https://python-gtk-3-tutorial.readthedocs.io/en/latest/} y de las diferentes librerías necesarias para el desarrollo de la aplicación. Varios ejemplos de estas librerías son:
             \begin{itemize}
@@ -82,7 +82,7 @@
                 
                 A continuación, se encuentra una zona donde se definen diferentes funciones que serán usadas repetidamente a lo largo del \textit{script}. 
                 
-                Después, se definen algunas variables globales necesarias y da comienzo la clase \textit{Main} de la aplicación. En ella, se inicializan las referencias a los diferentes elementos de la interfaz gráfica con las que los usuarios interactúan y se establecen qué funciones se llaman en función de las señales que manejan. Estas funciones se definen en último lugar a continuación de dichas inicializaciones. En el anexo X se puede leer el código en su totalidad.
+                Después, se definen algunas variables globales necesarias y da comienzo la clase \textit{Main} de la aplicación. En ella, se inicializan las referencias a los diferentes elementos de la interfaz gráfica con las que los usuarios interactúan y se establecen qué funciones se llaman en función de las señales que manejan. Estas funciones se definen en último lugar a continuación de dichas inicializaciones. En el anexo C se puede leer el código en su totalidad.
                
         
 \bibliography{biblio.bib}

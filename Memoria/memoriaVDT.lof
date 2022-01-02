@@ -1,37 +1,47 @@
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Ejemplo de cálculo de $d'$ utilizando modelos thursthonianos. Fte: \cite {PsychophysicsB} }}{11}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Vista en planta del auditorio de la ETSIST. La zona verde se corresponde con el escenario. La zona roja con el patio de butacas. La zona amarilla con los pasillos y zonas de paso. La zona azul son las bambalinas laterales. Las lineas discontínuas marcan la superficie de la concha acústica y los paneles de madera del techo.}}{14}{}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces El auditorio de la ETSIST. Izquierda: patio de butacas visto desde el escenario. Derecha: escenario}}{15}{}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Distribución de las posiciones de grabación de las respuestas impulsivas. El cuadrado azul marca la posición de la fuente de sonido y los círculos rojos las posiciones de los micrófonos.}}{16}{}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces De izquierda a derecha y arriba a abajo: Fuente dodecaédrica, disposición de los micrófonos de medida, tarjeta de sonido MOTU y amplificador de potencia Crown.}}{17}{}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Disposición de la zona de control para la realización de las grabaciones.}}{18}{}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Diagrama de bloques utilizado para la primera toma de datos}}{18}{}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Patch en MaxMSP para la convolución de las respuestas impulsivas con el audio anecoico.}}{20}{}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Micrófonos biaurales Roland y grabadora Yamaha utilizada para la grabación de las respuestas.}}{21}{}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Diagrama de bloques utilizado para la segunda toma de datos}}{22}{}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Ejemplo de la disposición del sujeto para la grabación de las señales. Los micrófonos se encuentran en sus oídos.}}{22}{}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Medidas de distancias tomadas dentro del auditorio.}}{24}{}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ejemplo de cálculo de $d'$ utilizando modelos thurstonianos. Fte: \cite {PsychophysicsB} }}{13}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Ventana de inicio del programa \textit {Glade}.}}{25}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Captura del programa \textit {Gnome Builder}.}}{26}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Versión inicial de la interfaz de usuario.}}{26}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Versión inicial de la interfaz de usuario.}}{27}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Vista en planta del auditorio de la ETSIST. La zona verde se corresponde con el escenario. La zona roja con el patio de butacas. La zona amarilla con los pasillos y zonas de paso. La zona azul son las bambalinas laterales. Las lineas discontínuas marcan la superficie de la concha acústica y los paneles de madera del techo.}}{16}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces El auditorio de la ETSIST. Izquierda: patio de butacas visto desde el escenario. Derecha: escenario}}{17}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Distribución de las posiciones de grabación de las respuestas impulsivas. El cuadrado azul marca la posición de la fuente de sonido y los círculos rojos las posiciones de los micrófonos.}}{18}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces De izquierda a derecha y arriba a abajo: Fuente dodecaédrica, disposición de los micrófonos de medida, tarjeta de sonido MOTU y amplificador de potencia Crown.}}{19}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Disposición de la zona de control para la realización de las grabaciones.}}{20}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagrama de bloques utilizado para la primera toma de datos}}{20}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Patch en \textit {MaxMSP} para la convolución de las respuestas impulsivas con el audio anecoico.}}{22}{}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Micrófonos biaurales Roland y grabadora Yamaha utilizada para la grabación de las respuestas.}}{23}{}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagrama de bloques utilizado para la segunda toma de datos}}{24}{}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Ejemplo de la disposición del sujeto para la grabación de las señales. Los micrófonos se encuentran en sus oídos.}}{24}{}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Respuesta al impulso obtenida con el software \textit {Dirac}.}}{25}{}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Medidas de distancias tomadas dentro del auditorio.}}{26}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Posiciones de las grabaciones utilizadas para el test de prueba.}}{30}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Interfaz gráfica para la realización del test previo.}}{31}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Aapriencia del entrenamiento previo}}{34}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Apariencia de la interfaz del test.}}{34}{}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Varios de los participantes durante el transcurso de los test.}}{35}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ventana de inicio del programa \textit {Glade}.}}{27}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Captura del programa \textit {Gnome Builder}.}}{28}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Versión inicial de la interfaz de usuario.}}{28}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Versión final de la interfaz de usuario.}}{29}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Posiciones de las grabaciones utilizadas para el test de prueba.}}{32}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Interfaz gráfica para la realización del test previo.}}{33}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Apariencia del entrenamiento previo}}{36}{}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Apariencia de la interfaz del test.}}{36}{}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Varios de los participantes durante el transcurso de los test.}}{37}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ejemplo gráfico del cálculo de la distancia a la fuente.}}{41}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Coeficientes $d'$ y su desviación estándar en función de la distancia a la fuente.}}{45}{}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Coeficientes $d'$ y su desviación estándar en función de la distancia a la fuente cuando las respuestas están marcadas como ``Sin duda''.}}{46}{}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Coeficientes $d'$ en función de la distancia a la fuente representado sobre el plano del auditorio. Los valores verdes representan un valor bajo de $d'$; mientras que los rojos representan valores elevados.}}{47}{}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Coeficientes $d'$ y su desviación estándar en función de la distancia entre butacas.}}{49}{}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Coeficientes $d'$ y su desviación estándar en función de la distancia entre butacas cuando las respuestas están marcadas como ``Sin duda''.}}{49}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Coeficientes $d'$ en función de la distancia a la fuente.}}{41}{}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Coeficientes $d'$ en función de la distancia a la fuente cuando las respuestas están marcadas como ``Sin duda''.}}{42}{}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Coeficientes $d'$ en función de la distancia a la fuente representado sobre el plano del auditorio. Los valores verdes representan un valor bajo de $d'$; mientras que los rojos representan valores elevados.}}{43}{}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Coeficientes $d'$ en función de la distancia entre butacas.}}{45}{}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Coeficientes $d'$ en función de la distancia entre butacas cuando las respuestas están marcadas como ``Sin duda''.}}{45}{}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}
 \babel@toc {spanish}{}

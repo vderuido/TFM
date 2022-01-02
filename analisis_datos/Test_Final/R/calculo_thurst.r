@@ -10,7 +10,7 @@ a<-dprime_table(aciertos,total,Protocolos)
 
 # Calculo para distancia respecto de la fuente en metros
 aciertos2<- c(10,25,24,41,41,53,79,81,66,53,74,43,25,18)
-total2<-c(15,35,32,54,56,67,102,100,84,63,95,62,44,41)
+total2<-c(15,35,32,53,55,67,101,99,84,63,95,62,44,39)
 Protocolos2<- c("twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC")
 a2<-dprime_table(aciertos2,total2,Protocolos2)
 
@@ -22,7 +22,7 @@ a3<- dprime_table(aciertos3,total3,Protocolos3)
 
 # Calculo para distancia respecto de la fuente en metros solo SIN DUDA
 aciertos4<- c(8,22,17,34,36,44,69,69,56,42,59,34,15,14)
-total4<-c(11,30,23,40,47,52,82,84,68,49,77,42,25,31)
+total4<-c(11,30,23,39,47,52,81,84,68,49,77,42,25,29)
 Protocolos4<- c("twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC","twoAFC")
 a4<-dprime_table(aciertos4,total4,Protocolos4)
 
