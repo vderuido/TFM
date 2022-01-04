@@ -1,0 +1,32 @@
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\author{Víctor de Tejada Molera}
+\begin{document}
+\chapter*{Resumen}
+La psicoacústica es una rama del conocimiento que estudia cómo percibimos el sonido las personas. Este es un campo muy amplio y tiene numerosas aplicaciones dentro de diversas áreas como puede ser la acústica arquitectónica, los videojuegos o la industria audiovisual, por citar algunos ejemplos.
+
+    La forma más habitual de trabajo en este campo es mediante la realización test subjetivos. Los test subjetivos se componen de un determinado número de personas que se ven expuestos a estímulos (acústicos, pero a veces también visuales), y deben responder a una serie de cuestiones sobre su percepción sobre dichos estímulos. Para su correcta realización, antes han de determinarse una serie de asuntos previos como qué se pretende evaluar, el número de participantes, el tipo de señales a utilizar, la duración del estudio o el tipo de análisis estadístico a realizar. Estas características resultan claves para conseguir unos datos que sean útiles a la hora de extraer conclusiones.\newline
+
+    En este proyecto, se pretende estudiar cómo varía la percepción de los participantes con la escucha de las respuestas al impulso biaurales de una sala. Estas respuestas se han obtenido variando la posición de recepción, mientras se mantiene estática la posición de la fuente sonora. De esta forma, se ha logrado simular cómo una persona escucharía las respuestas al impulso si se encontrara sentado en distintas posiciones dentro del patio de butacas de un auditorio.
+
+    Para lograr este objetivo, se realiza una primera toma de datos con el objetivo de realizar un test preliminar con el que realizar una primera comprobación de hipótesis. 
+
+    A continución, se realiza una segunda toma de datos con la que, utilizando unos micrófonos biaurales, se obtienen las señales con las que se realiza el test definitivo.
+
+    De forma paralela, se ha ido desarrollando una aplicación en el lenguaje de programación Python que dispone de una interfaz gráfica, así como el resto de herramientas necesarias, para que los participantes realicen los test.
+
+    Con los datos obtenidos se realizan dos tipos de análisis de datos: por un lado se realiza un análisis más convencional utilizando la norma UNE-EN ISO 10399. Esta norma determina la probabilidad de estar realizando una afirmación errónea en función del número de respuestas ``correctas'' y el número total de respuestas. Por otro lado, se realiza un análisis mediante la utilización de \textit{modelos thurstonianos} que permiten realizar comparaciones cuantitativas entre agrupaciones de datos, a priori, independientes.
+
+    Finalmente, con estos dos análisis se extraen las conclusiones del test subjetivo, pero también las ventajas de un sistema de análisis sobre el otro, así como en qué casos puede ser más útil utilizar uno sobre el otro.
+    
+    
+\end{document}

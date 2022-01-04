@@ -12,21 +12,14 @@
 \author{Víctor de Tejada Molera}
 \begin{document}
 \chapter{Introducción}
-La psicoacústica es una rama del conocimiento que estudia cómo percibimos el sonido las personas. Este es un campo muy amplio y tiene numerosas aplicaciones dentro de diversas áreas como puede ser la acústica arquitectónica, los videojuegos o la industria audiovisual, por citar algunos ejemplos.
-
-    La forma más habitual de trabajo en este campo es mediante la realización test subjetivos. Los test subjetivos se componen de un determinado número de personas que se ven expuestos a estímulos (acústicos, pero a veces también visuales), y deben responder a una serie de cuestiones sobre su percepción sobre dichos estímulos. Para su correcta realización, antes han de determinarse una serie de asuntos previos como qué se pretende evaluar, el número de participantes, el tipo de señales a utilizar, la duración del estudio o el tipo de análisis estadístico a realizar. Estas características resultan claves para conseguir unos datos que sean útiles a la hora de extraer conclusiones.\newline
-
-    En este proyecto, se pretende estudiar cómo varía la percepción de los participantes con la escucha de las respuestas al impulso biaurales de una sala. Estas respuestas se han obtenido variando la posición de recepción, mientras se mantiene estática la posición de la fuente sonora. De esta forma, se ha logrado simular cómo una persona escucharía las respuestas al impulso si se encontrara sentado en distintas posiciones dentro del patio de butacas de un auditorio.
-
-    Para lograr este objetivo, se realiza una primera toma de datos con el objetivo de realizar un test preliminar con el que realizar una primera comprobación de hipótesis. 
-
-    A continución, se realiza una segunda toma de datos con la que, utilizando unos micrófonos biaurales, se obtienen las señales con las que se realiza el test definitivo.
-
-    De forma paralela, se ha ido desarrollando una aplicación en el lenguaje de programación Python que dispone de una interfaz gráfica, así como el resto de herramientas necesarias, para que los participantes realicen los test.
-
-    Con los datos obtenidos se realizan dos tipos de análisis de datos: por un lado se realiza un análisis más convencional utilizando la norma UNE-EN ISO 10399. Esta norma determina la probabilidad de estar realizando una afirmación errónea en función del número de respuestas ``correctas'' y el número total de respuestas. Por otro lado, se realiza un análisis mediante la utilización de \textit{modelos thurstonianos} que permiten realizar comparaciones cuantitativas entre agrupaciones de datos, a priori, independientes.
-
-    Finalmente, con estos dos análisis se extraen las conclusiones del test subjetivo, pero también las ventajas de un sistema de análisis sobre el otro, así como en qué casos puede ser más útil utilizar uno sobre el otro.
+    La respuesta al impulso de una sala es como se denomina al comportamiento acústico que se obtiene en una determinada posición de recepción cuando es espacio es excitado con una señal del tipo ``Delta'' desde una posición de emisión. Este tipo de respuestas tienen una gran importancia ya que aportan información sobre la reverberación del espacio, la inteligibilidad, la capacidad para realizar localizaciones acústicas dentro del recinto, etc. Por este motivo, se pueden considerar como una de las señales más útiles para la caracterización acústica de un determinado espacio. 
     
+    A pesar de todas estas bondades, las respuestas al impulso tienen una gran limitación: sólo aportan información sobre cómo se comporta el espacio para el par de puntos que se fijan como punto de emisión y de recepción. Por este motivo, si se quiere caracterizar de forma adecuada un recinto, se deben tomar un elevado número de respuestas de forma que se consiga obtener un número de puntos de recepción suficientes.
+    
+    ¿Pero cuántas posiciones son realmente necesarias? Si se analiza un espacio como un aula, un auditorio o una sala de conferencias, las posiciones de emisión lógicas vienen marcadas por las posiciones donde estarían colocados los ponentes o los músicos, pero con las posiciones de recepción la situación se complica puesto que es habitual que los espacios cuenten con cientos o miles de asientos para el público. Para solucionar esta pregunta conviene estudiar cómo varía la percepción de las personas y comprobar si existen posiciones para los que los participantes son incapaces de distinguir si están en una posición u otra.
+    
+    Para resolver estas cuestiones entra en juego la Psicoacústica. La psicoacústica es el campo de la ciencia que estudia cómo las personas perciben el sonido y la forma más habitual de trabajo es mediante la realización de test subjetivos de audio. Estos test se componen de un determinado número de personas que se ven expuestos a estímulos (acústicos, pero a veces también visuales), y deben responder a una serie de cuestiones sobre su percepción sobre dichos estímulos.
+    
+    La psicoacústica, como se puede suponer, depende en gran medida de procesos estocásticos para la elaboración de sus conclusiones. Por este motivo, es importante disponer de un gran número de participantes para que los resultados tengan relevancia a nivel estadístico. Si el número de participantes fuera pequeño, las desviaciones obtenidas tendrían valores muy elevados y los resultados podrían estar fuertemente influidos por el azar, haciendo muy complicado volver a obtener valores similares y que otros estudios fueran capaces de reproducir el mismo experimento.
     
 \end{document}
