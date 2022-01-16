@@ -43,7 +43,7 @@ En este anexo se realiza el cálculo del presupuesto que ha sido necesario para 
         
         Para la realización de los test subjetivos de audio se invirtieron un total de 20 días en jornadas de 8 horas. Los participantes del test fueron voluntarios, por lo que no suponen de un coste adicional dentro del proyecto. Durante la realización de los test había una persona encargada de solucionar cualquier problema que pudiera aparecer, resolver dudas a los participantes y encargarse de las tareas de limpieza y desinfección del material.
         
-        Por último, el análisis de los resultados de los dos test ha requerido del trabajo de una persona en durante 14 días. También ha sido necesaria alrededor de una 7 días para la revisión de los contenidos y la corrección de errores.
+        Por último, el análisis de los resultados de los dos test ha requerido del trabajo de una persona durante 14 días. También ha sido necesaria alrededor de unos 7 días para la revisión de los contenidos y la corrección de errores.
         
         A lo largo de todo el proyecto se han realizado varias reuniones con el tutor académico para hacer revisiones, buscar soluciones para problemas que iban apareciendo, etc.
         
@@ -55,7 +55,7 @@ En este anexo se realiza el cálculo del presupuesto que ha sido necesario para 
 			\begin{scriptsize}
 			\begin{tabular}{| c || c | c | c | c | c |}
 				\hline
-				\textbf{Elemento}&\textbf{Coste/ud}&\textbf{Unidades}&\textbf{Coste Total}\\ \hline
+				\textbf{Elemento}&\textbf{Coste/ud [\euro]}&\textbf{Unidades}&\textbf{Coste Total [\euro]}\\ \hline
                 Portátil, 12 GB RAM, Intel i5&800.00&2&1600.00\\ \hline
                 Licencia Windows 10&259.00&1&259.00\\ \hline
                 Licencia Debian&0.00&1&0.00\\ \hline
@@ -66,7 +66,7 @@ En este anexo se realiza el cálculo del presupuesto que ha sido necesario para 
                 Micrófono ominidireccional AKG-CK92&180.00&1&180.00\\ \hline
                 Micrófono bidireccional AKG-CK94&440.85&1&440.85\\ \hline
                 Tarjeta de sonido MOTU UltraLite-mk3 Hybrid&410.00&1&410.00\\ \hline
-                Fuente dodecaédrica AVM DO-12&&1&0.00\\ \hline
+                Fuente dodecaédrica AVM DO-12&&1&3630.00\\ \hline
                 Alargaderas y cableado para conexionado de equipos&51.43&2&102.86\\ \hline
                 Trípodes y sujecciones para los micrófonos&35.00&1&35.00\\ \hline
                 Micrófonos biaurales Roland CS-10EM&99.99&1&99.99\\ \hline
@@ -75,8 +75,7 @@ En este anexo se realiza el cálculo del presupuesto que ha sido necesario para 
                 Hora de trabajo Ing. Junior&9.75&268&2613.00\\ \hline
                 Hora de trabajo Ing. Senior x2&12.50&90&1125.00\\ \hline
                 Alquiler auditorio ETSIST UPM&1863.79&3&5591.37\\ \hline
-                Alquiler laboratorio CITSEM&&1&0.00\\ \hline
-                -&-&\textbf{Total}&\textbf{15535.42}\\ \hline
+                -&-&\textbf{Total [\euro]}&\textbf{19165.42}\\ \hline
         
             \end{tabular}
 			\caption{Tabla de costes del proyecto.}
@@ -541,6 +540,11 @@ plt.show()
 \end{verbatim}
 
 \chapter{Consentimiento informado}
+    En este anexo se recoge el documento de ``consentimiento informado'' que todos los participantes de los test tuvieron que leer y firmar.
+    
+    El modelo de este documento está sacado de otro proyecto anterior \cite{Tejada2020}.
+    
+    Las hojas de consentimiento recogidas están en custodia del autor del proyecto.
     \includepdf[pages=-]{consentimientoInformado.pdf}
     
 \chapter{Código del script en R}
@@ -588,10 +592,12 @@ a5<- dprime_table(aciertos5,total5,Protocolos5)
 \end{verbatim}
 
 \chapter{Resultados de los test}
+    En este anexo se recogen todas las respuestas obtenidas para cada uno de los test perceptuales realizados. En el test previo se obtuvieron un total de 70 preguntas de 10 participantes diferentes. En el test final, 34 personas respondieron al test, obteniéndose 850 respuestas diferentes.
 
 \section{Resultados del test previo}
-\scriptsize
-\begin{longtable}[c]{|c|c|c|c|}
+    Las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer la posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no.
+    \scriptsize
+    \begin{longtable}[c]{|c|c|c|c|}
 		\hline
 		\textbf{archivo1}&\textbf{archivo2}&\textbf{respuesta}&\textbf{seguridad}\\ \hline
 		\endfirsthead
@@ -672,12 +678,12 @@ F1B8.wav&F1B8.wav&1&1\\ \hline
 \caption{Resultados obtenidos del test previo.} 
 \end{longtable}
 \normalsize		
-Las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer la posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no.
+
 
 \section{Resultados del test final}
-
-\scriptsize
-\begin{longtable}[c]{|c|c|c|c|c|c|c|c|c|c|}
+    Al igual que en con los resultados del test previo, las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer su posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no. ``D.Fila'' muestra la distancia, en metros, entre las filas de los dos audios. ``D.Butacas'' arroja el mismo valor, pero entre la distancia del número de butaca. ``Distancia'' es la distancia entre ambas posiciones. ``D.fte X'' y ``D.fte Y'' son las distancias, en coordenada ``X'' e ``Y'', respectivamente,  de la posición intermedia entre ambas localizaciones. Por último, ``D.Fuente'' es la distancia de la posición intermedia entre ambas posiciones de butacas respecto de la fuete.
+    \scriptsize
+    \begin{longtable}[c]{|c|c|c|c|c|c|c|c|c|c|}
 
 		\hline
 		\textbf{Archivo1}&\textbf{Archivo2}&\textbf{Respuesta}&\textbf{Seguridad}&\textbf{D.Fila}&\textbf{D.Butaca}&\textbf{Distancia}&\textbf{D.fte X}&\textbf{D.fte Y}&\textbf{D.Fuente}\\ \hline
@@ -1539,5 +1545,4 @@ F16B2.wav&A1B22.wav&0&1&18&10&17.045&2.147&14.840&14.994\\ \hline
 \caption{Resultados obtenidos del test final.}
 \end{longtable}
 \normalsize
-Al igual que en con los resultados del test previo, las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer su posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no. ``D.Fila'' muestra la distancia, en metros, entre las filas de los dos audios. ``D.Butacas'' arroja el mismo valor, pero entre la distancia del número de butaca. ``Distancia'' es la distancia entre ambas posiciones. ``D.fte X'' y ``D.fte Y'' son las distancias, en coordenada ``X'' e ``Y'', respectivamente,  de la posición intermedia entre ambas localizaciones. Por último, ``D.Fuente'' es la distancia de la posición intermedia entre ambas posiciones de butacas respecto de la fuete.
 \end{document}

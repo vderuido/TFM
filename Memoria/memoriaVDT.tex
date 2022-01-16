@@ -19,20 +19,27 @@
 \author{Víctor de Tejada Molera}
 
 \begin{document}
+\chapter*{Agradecimientos}
+    \thispagestyle{empty}
+    \begin{flushright}
+        \textit{Gracias a las personas que se ofrecieron voluntarias para invertir unos minutos de su vida en escuchar ``ruiditos''. A mi tutor, Nico, por su santa paciencia y hacer esta locura de proyecto algo más fácil de llevar. Por último, a mi familia y amigos que nunca entendieron muy bien qué estudiaba, pero me siguen queriendo igual.}\\ Víctor.
+    \end{flushright}
+    
+
 \chapter*{Resumen}
     La psicoacústica es una rama del conocimiento que estudia cómo percibimos el sonido las personas. Este campo es muy amplio y tiene numerosas aplicaciones como puede ser la acústica arquitectónica, los videojuegos o la industria audiovisual, por citar algunos ejemplos.
 
-    La forma más habitual de trabajo en este campo es mediante la realización test subjetivos. Estos se componen de un determinado número de personas que se ven expuestos a estímulos y deben responder a una serie de cuestiones sobre su percepción sobre dichos estímulos. Para su correcta realización, antes han de determinarse algunas cuestiones como qué se pretende evaluar, el número de participantes, el análisis estadístico a realizar, etc. Estas características resultan claves para conseguir unos datos útiles a la hora de extraer conclusiones.
+    La forma más habitual de trabajo en este campo es mediante la realización de test subjetivos que ayudan a validar o descartar hipótesis sobre la percepción auditva. Estos test se componen de un determinado número de personas que se ven expuestas a estímulos sonoros y deben responder a una serie de cuestiones sobre su percepción de dichos estímulos. Para su correcta realización, antes han de determinarse algunas cuestiones como qué se pretende evaluar, el número de participantes, el análisis estadístico a realizar, etc. Estas características resultan claves para conseguir unos datos útiles a la hora de extraer conclusiones.
 
     En este proyecto, se pretende estudiar cómo varía la percepción de los participantes con la escucha de las respuestas al impulso biaurales de una sala. Estas respuestas se han obtenido variando la posición de recepción, mientras se mantiene estática la posición de la fuente sonora. De esta forma, se ha logrado simular cómo una persona escucharía las respuestas al impulso si se encontrara sentado en distintas posiciones dentro del patio de butacas de un auditorio.
 
-    Para lograr este objetivo, se realiza una primera toma de datos con el objetivo de realizar un test preliminar con el que realizar una primera comprobación de hipótesis. 
+    Para lograr este objetivo, se establece una primera toma de datos con el objetivo de realizar un test preliminar con el que llevar a cabo una primera comprobación de hipótesis. 
 
-    A continuación, se realiza una segunda toma de datos con la que, utilizando unos micrófonos biaurales, se obtienen las señales con las que se realiza el test definitivo.
+    A continuación, se efectúa una segunda toma de datos con la que, utilizando unos micrófonos biaurales, se obtienen las señales con las que 34 personas realizan el test definitivo.
 
-    De forma paralela, se ha ido desarrollando una aplicación en el lenguaje de programación Python que dispone de una interfaz gráfica, así como el resto de herramientas necesarias, para que los participantes realicen los test.
+    De forma paralela, se ha ido desarrollando una aplicación en el lenguaje de programación Python que dispone de una interfaz gráfica, así como el resto de herramientas necesarias, para que los participantes respondan los test.
 
-    Con los datos obtenidos se realizan dos tipos de análisis de datos: por un lado se realiza un análisis más convencional utilizando la norma UNE-EN ISO 10399. Esta norma determina la probabilidad de estar realizando una afirmación errónea en función del número de respuestas ``correctas'' y el número total de respuestas. Por otro lado, se realiza un análisis mediante \textit{modelos thurstonianos} que permiten realizar comparaciones cuantitativas entre agrupaciones de datos, a priori, independientes.
+    Con los datos obtenidos se realizan dos tipos de análisis de datos: por un lado se lleva a cabo un análisis más convencional utilizando la norma UNE-EN ISO 10399. Esta norma determina la probabilidad de la hipótesis de partida sea errónea en función del número de respuestas ``correctas'' y el número total de respuestas. Por otro lado, se completa un análisis mediante \textit{modelos thurstonianos} que permiten efectuar comparaciones cuantitativas entre agrupaciones de datos, a priori, independientes.
 
     Finalmente, con estos dos análisis se extraen las conclusiones proyecto, así como posibles mejoras y aplicaciones para futuros estudios.
     
@@ -45,25 +52,25 @@
 
     To achieve this objective, a first collection of data was carried out in order to perform a preliminary test which will help us to check an initial hypothesis. 
 
-    Then, a second data collection is obtained, using binaural microphones, to pick up the signals with which the definitive test is made.
+    Then, a second data collection is produced, using binaural microphones, to pick up the signals with which the definitive test is made.
 
     At the same time, an application has been developed using the Python programming language, as well as the rest of necessary tools, to ensure the correct performance of the participants during the tests.
 
     Two types of data analysis are performed: on the one hand, a more conventional analysis is made using the UNE-EN ISO 10399 standard. This standard determines the probability of making a wrong statement according to the number of ``right'' answers and the total number of answers. On the other hand, another analysis is made using Thurstonian models that allow quantitative comparisons between independent groups of data.
 
-    Finally, with these two analyses, conclusions are made, as well as possible improvements and applications for future studies.
+    Finally, with these two analyses, conclusions are obtained, as well as possible improvements and applications for future studies.
 
 \tableofcontents
 \listoffigures
 \listoftables
 \chapter{Introducción}
-    La respuesta al impulso de una sala se denomina como el comportamiento acústico que se obtiene en una determinada posición de recepción, cuando ese espacio es excitado con una señal del tipo ``Delta'', desde una posición de emisión. Este tipo de respuestas tienen una gran importancia ya que aportan información sobre la reverberación del espacio, la inteligibilidad, la capacidad para realizar localizaciones acústicas dentro del recinto, etc. Por este motivo, se pueden considerar como una de las señales más útiles para la caracterización acústica de un determinado espacio. 
+    La \textit{respuesta al impulso de una sala} es una medida que caracteriza el comportamiento acústico que se obtiene en una determinada posición de recepción, cuando ese espacio es excitado con una señal del tipo ``Delta'', desde una posición de emisión. Este tipo de respuestas tienen una gran importancia ya que aportan información sobre la reverberación del espacio, la inteligibilidad, la capacidad para realizar localizaciones acústicas dentro del recinto, etc. Por este motivo, se pueden considerar como una de las señales más útiles para la caracterización acústica de un determinado espacio. 
     
     A pesar de todas estas bondades, las respuestas al impulso tienen una gran limitación: sólo aportan información sobre cómo se comporta el espacio para el par de puntos que se fijan como punto de emisión y de recepción. Por tanto, si se quiere caracterizar de forma adecuada un recinto, se deben tomar un elevado número de respuestas de forma que se consiga obtener un número de puntos de recepción suficientes.
     
-    ¿Pero cuántas posiciones son realmente necesarias? Si se analiza un espacio como un aula, un auditorio o una sala de conferencias, las posiciones de emisión lógicas vienen marcadas por las posiciones dónde estarían colocados los ponentes o los músicos. Con las posiciones de recepción la situación se complica, puesto que es habitual que los espacios cuenten con cientos o miles de asientos para el público. Para solucionar esta pregunta, conviene estudiar cómo varía la percepción de las personas y comprobar si existen posiciones para los que los participantes son incapaces de distinguir si están en una posición u otra.
+    ¿Pero cuántas posiciones son realmente necesarias? Si se analiza un espacio como un aula, un auditorio o una sala de conferencias, las posiciones de emisión lógicas vienen marcadas por las posiciones dónde estarían colocados los ponentes o los músicos. Con las posiciones de recepción la situación se complica, puesto que es habitual que los espacios cuenten con cientos o miles de asientos para el público. Para solucionar esta pregunta, conviene estudiar cómo varía la percepción de las personas y comprobar si existen posiciones para las que los participantes son incapaces de distinguir si están en una posición u otra.
     
-    Para resolver estas cuestiones entra en juego la \textit{Psicoacústica}. La psicoacústica es el campo de la ciencia que estudia cómo las personas perciben el sonido, y la forma más habitual de trabajo es mediante la realización de test subjetivos de audio. Estos test se componen de un determinado número de personas que se ven expuestas a estímulos (acústicos, pero a veces también visuales), y deben responder a una serie de cuestiones sobre su percepción sobre dichos estímulos.
+    Para resolver estas cuestiones entra en juego la \textit{Psicoacústica}. La psicoacústica es el campo de la ciencia que estudia cómo las personas perciben el sonido, y la forma más habitual de trabajo es mediante la realización de test subjetivos de audio. Estos test se componen de un determinado número de personas que se ven expuestas a estímulos (acústicos, pero a veces también visuales), y deben responder a una serie de cuestiones sobre su percepción de dichos estímulos.
     
     La psicoacústica, como se puede suponer, depende en gran medida de procesos estadísticos para la elaboración de sus conclusiones. Por este motivo, es importante disponer de un gran número de participantes para que los resultados tengan relevancia estadística. Si el número de participantes fuera pequeño, las desviaciones obtenidas tendrían valores muy elevados y los resultados podrían estar fuertemente influidos por el azar, haciendo muy complicado volver a obtener valores similares y que otros estudios fueran capaces de reproducir el mismo experimento.
     
@@ -72,13 +79,13 @@
     También resulta importante determinar un buen sistema para el análisis de los datos, puesto que la utilización de una formas u otras pueden resultar más útiles para la evaluación de ciertos indicadores perceptuales.
     
     \section{Objetivos}
-        Con todo esto, el objetivo de este proyecto es el de comprobar las diferencias perceptuales que se obtienen entre distintas respuestas impulsivas tomadas en distintas posiciones de una sala.
+        Con todo esto, el objetivo de este proyecto es el de comprobar las diferencias perceptuales que se obtienen entre distintas respuestas impulsivas tomadas en distintas posiciones de una sala.\newline
         
         Para lograr este objetivo, se identifican una serie de objetivos secundarios. Entre otros se pueden citar:
         
         \begin{itemize}
             \item Escoger una sala adecuada donde realizar las medidas que tenga unas características determinadas como tamaño, propiedades acústicas invariantes y no dependientes del exterior, etc.
-            \item Estudio del número de respuestas al impulso necesarias para el proyecto, tanto en distintas posiciones como en posiciones repetidas para validar la invarianza de las medidas y del recinto. Estimación del tiempo y esfuerzo necesarios para realizar las medidas y planificación de la tareas. Estrategias para optimizar el proceso.
+            \item Estudio del número de respuestas al impulso necesarias para el proyecto, tanto en distintas posiciones como en posiciones repetidas para validar la invarianza de las medidas y del recinto. Estimación del tiempo y esfuerzo necesarios para realizar las medidas y planificación de la tareas, así como la búsqueda de estrategias para optimizar el proceso.
             \item Obtención de un número relevante de respuestas al impulso en dicha sala de acuerdo con las estimaciones y estrategias establecidas anteriormente.
             \item Postprocesado de las señales obtenidas para que puedan formar una base de datos sobres las que realizar test psicoacústicos.
             \item Diseño de los test más adecuados para alcanzar el objetivo principal. Esto incluye la elección de los métodos estadísticos y todas las características propias de cada tipo de test.
@@ -94,13 +101,13 @@
         
         Después, se encuentra ``Desarrollo de la aplicación del test subjetivo''. En este apartado se explican las tecnologías y algoritmos utilizados para la creación de la aplicación que recoge las respuestas de los participantes en los diferentes test, así como las modificaciones que ha ido sufriendo a lo largo del proyecto.
         
-        El siguiente capítulo es el de ``Realización de los test subjetivos de audio''. En él se comentan las características de los test realizados, tanto del test previo, como de los test finales. De la misma forma, se hace un recorrido por el procidimiento seguido para sus realizaciones.
+        El siguiente capítulo es el de ``Realización de los test subjetivos de audio''. En él se comentan las características de los test realizados, tanto del test previo, como de los test finales. De la misma forma, se hace un recorrido por el procedimiento seguido para sus realizaciones.
         
         Los siguientes apartados se centran en mostrar los resultados de los experimentos y el análisis estadístico, respectivamente. En él se incluyen las tablas relativas a cada uno de los test y a los diferentes tipos de análisis y agrupaciones de los datos.
         
         Para finalizar, se incluye un capítulo de ``Conclusiones'' donde se analiza el cumplimiento de los objetivos marcados al inicio del documento. También se ofrecen reflexiones para estudios posteriores y posibles nuevas líneas de investigación.
         
-        Al término del documento, se han añadido varios anexos en los que se aportan un análisis de los costes del proyecto y algunas tablas de interés demasiado amplias para incluirlas en el cuerpo de la memoria, por citar algunos ejemplos.
+        Al término del documento, se han añadido varios anexos en los que se aportan un análisis de los costes del proyecto y algunas tablas y documentos de interés demasiado amplias para incluirlas en el cuerpo principal de la memoria.
 
 \chapter{Antecedentes}
     En este capítulo se pretende realizar un análisis del estado del arte referente a los experimentos psicoacústicos; concretamente aquellos que se centran en la evaluación de diferencias perceptuales en entornos cerrados como auditorios, cines, salas de conferencias, etc.
@@ -971,7 +978,7 @@
             Al igual que ocurría con los resultados agrupados según la distancia a la fuente, se observa que, a pesar, de que el comportamiento es similar para ambas formas de analizar los datos, la norma UNE-EN ISO 10399\cite{ISO10399} es mucho menos sensible a los pequeños cambios en los resultados; mientras que los modelos thurstonianos ofrecen un rango mayor de datos que fluctúan más facilmente. Esto no es necesariamente peor; depende de lo que se pretenda conseguir con el estudio. Si se pretende determinar a partir de qué distancias las diferencias son significativas, la norma da información más útil en este sentido. Por otro lado, si se pretende estudiar el comportamiento de las diferencias perceptuales en función de la distancia, aquí los modelos thurstonianos tienen una gran ventaja frente a la norma.
             
 \chapter{Conclusiones}
-    En este proyecto se ha estudiado la percepción de las respuestas al impulso de una sala en diferentes posiciones de escucha. Para ello, se ha realizado un análisis del estado del arte de los test subjetivos relacionados con la percpeción auditva. De esta forma, se han fijado las características y requerimientos necesarios para la correcta toma de datos y la realización de nuestro test perceptual. De forma paralela, se ha diseñado una aplicación escrita en Python para la interacción por parte de los participantes y el análisis de los datos (esta última parte junto al desarrollo de un script en lenguaje de programación R). Por último, se ha realizado el análisis de los resultados categorizándolos en función de dos tipos de distribuciones.
+    En este proyecto se ha estudiado la percepción de las respuestas al impulso de una sala en diferentes posiciones de escucha. Para ello, se ha realizado un análisis del estado del arte de los test subjetivos relacionados con la percepción auditva. De esta forma, se han fijado las características y requerimientos necesarios para la correcta toma de datos y la realización de nuestro test perceptual. De forma paralela, se ha diseñado una aplicación escrita en Python para la interacción por parte de los participantes y el análisis de los datos (esta última parte junto al desarrollo de un script en lenguaje de programación R). Por último, se ha realizado el análisis de los resultados categorizándolos en función de dos tipos de distribuciones.
     
     \section{Satisfacción de los objetivos secundarios}
     
@@ -981,9 +988,9 @@
             El primero de ellos consistía en la selección de una sala adecuada donde realizar las medidas. Esta sala debía tener un tamaño lo suficientemente grande para que pudieran existir diferencias perceptuales importantes. Así mismo, la sala debía disponer de unas propiedades acústicas invariantes y que no dependieran del exterior. Esto se ha conseguido utilizando como espacio para las medidas, el auditorio de la ETSIST de la UPM. Este espacio cuenta con un aforo superior a las 300 butacas y su acústica está pensada para música coral con un aislamiento acústico suficiente para minimizar los efectos del ruido exterior. Con esto, los mayores desafíos se han visto reflejados en el control de las fuentes de ruido interno como zumbidos eléctricos o el efecto de los sistemas de climatización. Todas estas medidas han limitado el posible efecto de variables externas en las escuchas de los participantes.
         
         \subsection*{Estudio del número de respuestas necesarias}
-            Otro de los objetivos era el de estudiar el número de respuestas al impulso necesarias para el proyecto tanto para posiciones distitnas como en posiciones repetidas.A la vista de los resultados y el análisis realizado, se puede concluir que la percepción auditiva de las respuestas al impulso de un determinado espacio dependen, en gran medida, de la distancia a la fuente sonora. De esta forma, se puede ver como las diferencias son más perceptibles a medida que las respuestas se alejan de la fuente hasta que, en las posiciones más alejadas, dichas diferencias dejan de percibirse con una pendiente bastante abrupta. También se puede concluir que la distancia absoluta entre las posiciones de escucha tiene, a su vez, un rol muy importante a la hora de encontrar diferencias perceptuales. En este caso, se ha observado que las diferencias se encuentran más fácilmente a medida que aumenta dicha distancia. A priori, parece que esa percepción de diferencias se estabiliza llegado un determinado punto, pero no se tienen datos suficientes para afirmarlo. Debido a esto, se puede afirmar que la mejor forma de realizar los tomas de datos no es uniforme, sino que en las posiciones más cercanas y alejadas, la densidad de los datos puede ser menor, ya que la capacidad de los participantes para distinguir las señales es bastante menor que en el centro. En esta parte central, la habilidad para distinguir los estímulos es mayor, por lo que es necesario tener un mayor volumen de datos. 
+            Otro de los objetivos era el de estudiar el número de respuestas al impulso necesarias para el proyecto tanto para posiciones distintas como en posiciones repetidas.A la vista de los resultados y el análisis realizado, se puede concluir que la percepción auditiva de las respuestas al impulso de un determinado espacio dependen, en gran medida, de la distancia a la fuente sonora. De esta forma, se puede ver como las diferencias son más perceptibles a medida que las respuestas se alejan de la fuente hasta que, en las posiciones más alejadas, dichas diferencias dejan de percibirse con una pendiente bastante abrupta. También se puede concluir que la distancia absoluta entre las posiciones de escucha tiene, a su vez, un rol muy importante a la hora de encontrar diferencias perceptuales. En este caso, se ha observado que las diferencias se encuentran más fácilmente a medida que aumenta dicha distancia. A priori, parece que esa percepción de diferencias se estabiliza llegado un determinado punto, pero no se tienen datos suficientes para afirmarlo. Debido a esto, se puede afirmar que la mejor forma de realizar los tomas de datos no es uniforme, sino que en las posiciones más cercanas y alejadas, la densidad de los datos puede ser menor, ya que la capacidad de los participantes para distinguir las señales es bastante menor que en el centro. En esta parte central, la habilidad para distinguir los estímulos es mayor, por lo que es necesario tener un mayor volumen de datos. 
     
-            Las mayores dificultades que se han encontrado para la consecución de este objetivo es la imposibilidad de establecer unos criterios específicos para el número de respuestas. Aquí entran en juego variables como las dimensiones de la sala, la reverberación o la disposición del patio de butacas. Por este motivo, se antoja necesaria la realización de un análisis específico según el tipo de espacio sobre el que vayan a tomarse las medidas. También hay que tener en cuenta que la toma de datos es una de las partes de los proyectos más propensa a errores (voluntarios o involuntarios), lo que puede llevar a repeticiones y demoras en la realización del proyecto.
+            Las mayores dificultades que se han encontrado para la consecución de este objetivo es la imposibilidad de establecer unos criterios específicos para el número de respuestas. Aquí entran en juego variables como las dimensiones de la sala, la reverberación o la disposición del patio de butacas. Por este motivo, se antoja necesaria la realización de un análisis específico según el tipo de espacio sobre el que vayan a tomarse las medidas. También hay que tener en cuenta que la toma de datos es una de las partes de los proyectos más propensa a errores, lo que puede llevar a repeticiones y demoras en la realización del proyecto.
         
         \subsection*{Postprocesado de las señales para test perceptuales}
             Para el objetivo del postprocesado de las señales para su utilización en test psicoacústicos, se ha visto que no hay un sistema único para llevarse a cabo. El procedimiento varía en función del tipo de señales que se vayan a utilizar. Por ejemplo, para el caso de respuestas impulsivas, la utilización del software ``Dirac'' se ha mostrado como la opción más cómoda ya que, además de permitir la grabación de las señales, puede confirgurarse para realizar el procesado de forma automática. Si se optara por otro tipo de señales, como las respuestas convolucionadas con audios anecoicos, hay que acudir a otras herramientas que, preferiblemente, permitan la automatización del proceso para grupos de señales.
@@ -1050,7 +1057,7 @@ En este anexo se realiza el cálculo del presupuesto que ha sido necesario para 
         
         Para la realización de los test subjetivos de audio se invirtieron un total de 20 días en jornadas de 8 horas. Los participantes del test fueron voluntarios, por lo que no suponen de un coste adicional dentro del proyecto. Durante la realización de los test había una persona encargada de solucionar cualquier problema que pudiera aparecer, resolver dudas a los participantes y encargarse de las tareas de limpieza y desinfección del material.
         
-        Por último, el análisis de los resultados de los dos test ha requerido del trabajo de una persona en durante 14 días. También ha sido necesaria alrededor de una 7 días para la revisión de los contenidos y la corrección de errores.
+        Por último, el análisis de los resultados de los dos test ha requerido del trabajo de una persona durante 14 días. También ha sido necesaria alrededor de unos 7 días para la revisión de los contenidos y la corrección de errores.
         
         A lo largo de todo el proyecto se han realizado varias reuniones con el tutor académico para hacer revisiones, buscar soluciones para problemas que iban apareciendo, etc.
         
@@ -1547,6 +1554,11 @@ plt.show()
 \end{verbatim}
 
 \chapter{Consentimiento informado}
+    En este anexo se recoge el documento de ``consentimiento informado'' que todos los participantes de los test tuvieron que leer y firmar.
+    
+    El modelo de este documento está sacado de otro proyecto anterior \cite{Tejada2020}.
+    
+    Las hojas de consentimiento recogidas están en custodia del autor del proyecto.
     \includepdf[pages=-]{consentimientoInformado.pdf}
     
 \chapter{Código del script en R}
@@ -1594,10 +1606,12 @@ a5<- dprime_table(aciertos5,total5,Protocolos5)
 \end{verbatim}
 
 \chapter{Resultados de los test}
+    En este anexo se recogen todas las respuestas obtenidas para cada uno de los test perceptuales realizados. En el test previo se obtuvieron un total de 70 preguntas de 10 participantes diferentes. En el test final, 34 personas respondieron al test, obteniéndose 850 respuestas diferentes.
 
 \section{Resultados del test previo}
-\scriptsize
-\begin{longtable}[c]{|c|c|c|c|}
+    Las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer la posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no.
+    \scriptsize
+    \begin{longtable}[c]{|c|c|c|c|}
 		\hline
 		\textbf{archivo1}&\textbf{archivo2}&\textbf{respuesta}&\textbf{seguridad}\\ \hline
 		\endfirsthead
@@ -1678,12 +1692,12 @@ F1B8.wav&F1B8.wav&1&1\\ \hline
 \caption{Resultados obtenidos del test previo.} 
 \end{longtable}
 \normalsize		
-Las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer la posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no.
+
 
 \section{Resultados del test final}
-
-\scriptsize
-\begin{longtable}[c]{|c|c|c|c|c|c|c|c|c|c|}
+    Al igual que en con los resultados del test previo, las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer su posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no. ``D.Fila'' muestra la distancia, en metros, entre las filas de los dos audios. ``D.Butacas'' arroja el mismo valor, pero entre la distancia del número de butaca. ``Distancia'' es la distancia entre ambas posiciones. ``D.fte X'' y ``D.fte Y'' son las distancias, en coordenada ``X'' e ``Y'', respectivamente,  de la posición intermedia entre ambas localizaciones. Por último, ``D.Fuente'' es la distancia de la posición intermedia entre ambas posiciones de butacas respecto de la fuete.
+    \scriptsize
+    \begin{longtable}[c]{|c|c|c|c|c|c|c|c|c|c|}
 
 		\hline
 		\textbf{Archivo1}&\textbf{Archivo2}&\textbf{Respuesta}&\textbf{Seguridad}&\textbf{D.Fila}&\textbf{D.Butaca}&\textbf{Distancia}&\textbf{D.fte X}&\textbf{D.fte Y}&\textbf{D.Fuente}\\ \hline
@@ -2545,7 +2559,7 @@ F16B2.wav&A1B22.wav&0&1&18&10&17.045&2.147&14.840&14.994\\ \hline
 \caption{Resultados obtenidos del test final.}
 \end{longtable}
 \normalsize
-Al igual que en con los resultados del test previo, las dos primeras columnas muestran el nombre de los dos archivos de audio de donde se puede extraer su posición. Los números detrás de las letras ``F'' y ``B'' marcan el número de fila y de butaca, respectivamente. La columna ``Respuesta'' marca ``0'' si se seleccionó que ambos audios eran diferentes y ``1'' si se seleccionó que eran iguales. La columna ``Seguridad'' determina el nivel de seguridad marcado en la respuesta: ``1'' si se está seguro, ``0'' si no. ``D.Fila'' muestra la distancia, en metros, entre las filas de los dos audios. ``D.Butacas'' arroja el mismo valor, pero entre la distancia del número de butaca. ``Distancia'' es la distancia entre ambas posiciones. ``D.fte X'' y ``D.fte Y'' son las distancias, en coordenada ``X'' e ``Y'', respectivamente,  de la posición intermedia entre ambas localizaciones. Por último, ``D.Fuente'' es la distancia de la posición intermedia entre ambas posiciones de butacas respecto de la fuete.
+
     
     \bibliography{biblio}
     \bibliographystyle{babunsrt}
